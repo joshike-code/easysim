@@ -1715,7 +1715,6 @@ input:checked + .switch:active::before {
 }
 
 .port-wrapper .content-body {
-     outline: 1px solid red;
      width: 100%;
      margin-top: 1.3rem;
      display: grid;
@@ -1763,8 +1762,18 @@ input:checked + .switch:active::before {
      grid-template-rows: .6fr 1fr 1fr;
 }
 
+.port-wrapper .content-body .card-container.lg.out {
+     height: 300px;
+     grid-template-rows: .4fr 1.8fr 1fr;
+}
+
 .port-wrapper .content-body .card-container.lg .details {
      justify-content: space-between;
+}
+
+.port-wrapper .content-body .card-container.lg.out .details {
+     flex-direction: column;
+     align-items: flex-start;
 }
 
 .port-wrapper .content-body .card-container.lg .form-group input, 
@@ -1772,14 +1781,22 @@ input:checked + .switch:active::before {
      font-size: .8rem;
 }
 
-.port-wrapper .content-body .card-container.lg .details .network {
+.port-wrapper .content-body .card-container.lg.in .details .network {
      width: 45%;
      margin-right: .6rem;
 }
 
-.port-wrapper .content-body .card-container.lg .details .number {
+.port-wrapper .content-body .card-container.lg.out .details .network {
+     width: 50%;
+}
+
+.port-wrapper .content-body .card-container.lg.in .details .number {
      width: 55%;
      margin-left: .6rem;
+}
+
+.port-wrapper .content-body .card-container.lg.out .details .number {
+     width: 50%;
 }
 
 .port-wrapper .content-body .card-container.lg .details .form-group input,
@@ -1787,9 +1804,15 @@ input:checked + .switch:active::before {
      height: 2.5rem;
 }
 
+.port-wrapper .content-body .card-container.lg.out .details .form-group select option {
+     background: url("../images/mtn-inner.png");
+}
+
 .port-wrapper .content-body .card-container.lg .button-container {
      align-items: flex-end;
 }
+
+
 
 
 
