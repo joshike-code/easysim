@@ -1,0 +1,522 @@
+@import url("global.css");
+
+body {
+     width: 100%;
+     background: #4F85EB url('../images/login_background.png') repeat;
+     background-size: 500px 270px;
+     color: var(--color-dark);
+     font-weight: 400;
+}
+
+a {
+     color: var(--color-dark);
+     text-decoration: underline;
+     transition: all 300ms ease;
+}
+
+a:hover {
+     text-decoration: none;
+}
+
+
+.grey-out {
+     font-size: .8rem;
+     color: var(--color-grey-out);
+}
+
+/* ======== MAIN SECTION =========*/
+
+main > .container {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+}
+
+/* ======== SIM AREA SECTION =========*/
+main section.sim-area .container {
+     width: 100%;
+     margin-top: 2.6rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: flex-start;
+     gap: 1.3rem;
+}
+
+main section.sim-area img {
+     width: 350px;
+     align-self: flex-start;
+}
+
+main section.sim-area .virtual-sims {
+     padding: .7rem;
+     color: var(--color-white);
+}
+
+main section.sim-area h1 {
+     line-height: 4.5rem;
+}
+
+main section.sim-area p {
+     font-size: 1.13rem;
+     margin-top: 1.1rem;
+     line-height: 1.4rem;
+     font-weight: 500;
+}
+
+/* ======== FORM AREA SECTION =========*/
+main section.form-area {
+     width: 100%;
+     padding: 0 2.1rem;
+     position: relative;
+}
+
+main section.form-area .container {
+     max-width: 550px;
+     width: 100%;
+     height: 400px;
+     position: relative;
+}
+
+main section.form-area form {
+     width: 100%;
+     padding: 1.5rem 4rem;
+     background: var(--color-white);
+     box-shadow: 1px 20px 10px var(--color-primary-light);
+     position: absolute;
+     top: 68%;
+     transform: translateY(-50%) scale(.8);
+     opacity: 0;
+     z-index: 100;
+     transition: all 300ms ease;
+     transition-delay: 0s;
+}
+
+main section.form-area form.active {
+     transform: translateY(-50%);
+     opacity: 1;
+     z-index: 200;
+     transition-delay: .3s;
+}
+
+section.form-area h2.title {
+     margin-bottom: .7rem;
+     font-weight: 500;
+}
+
+section.form-area .register h2.title {
+     margin-bottom: .3rem;
+}
+
+section.form-area .form-group {
+     margin-bottom: 1rem;
+}
+
+section.form-area .register .form-group {
+     margin-bottom: .4rem;
+}
+
+.login .form-group:nth-child(3), .register .form-group:nth-child(4) {
+     margin-bottom: 1.4rem;
+}
+
+.login .form-group:nth-child(4), .register .form-group:nth-child(5) {
+     margin-top: 1rem;
+     display: flex;
+     align-items: flex-start;
+     gap: .7rem;
+}
+
+section.form-area .form-group label {
+     display: inline-block;
+     margin-bottom: .7rem;
+     font-weight: 400;
+     font-size: .8rem;
+}
+
+section.form-area .input-group {
+     width: 100%;
+     position: relative;
+}
+
+section.form-area .input-group input {
+     width: 100%;
+     height: var(--form-height);
+     padding: var(--form-padding);
+     background: var(--form-bg);
+     border-radius: var(--form-border-radius);
+     border: 1px solid transparent;
+     outline: none;
+     transition: all 300ms ease;
+}
+
+section.form-area .input-group i {
+     position: absolute;
+     right: 1rem;
+     top: 1.4rem;
+     color: #B2B8C0;
+     transform: translateY(-50%);
+     cursor: pointer;
+}
+
+section.form-area .input-group i.active::before {
+     color: #333;
+     content: "\f070";
+}
+
+
+/* Start Validation */
+section.form-area .input-group input:focus, 
+section.form-area .input-group input:not(:placeholder-shown) {
+     border-color: var(--color-primary);
+}
+
+
+section.form-area .input-group input:focus:valid {
+     border-color:  var(--color-success);
+}
+
+section.form-area .input-group input:focus:valid:not(:placeholder-shown) {
+     border-color: var(--color-success);
+}
+
+section.form-area .input-group input:focus:invalid:not(:placeholder-shown) {
+     border-color: var(--color-error);
+}
+
+
+section.form-area .input-group input:focus:invalid {
+     border-color: var(--color-error);
+}
+
+section.form-area .input-group input:focus, 
+section.form-area .input-group input:focus:placeholder-shown {
+     background: var(--form-bg);
+}
+/* End Validation */
+
+section.form-area .form-group input[type="checkbox"] {
+     appearance: checkbox;
+     display: inline-block;
+     width: auto;
+     margin-top: 2px;
+}
+
+section.form-area .btn-submit {
+     width: 100%;
+     margin-top: .7rem;
+     display: block;
+     padding: 12px 0;
+     color: var(--color-white);
+     background: var(--color-primary);
+     cursor: pointer;
+     height: var(--form-height);
+     border-radius: var(--form-border-radius);
+     transition: all 300ms ease;
+     box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.1);
+}
+
+section.form-area .btn-submit:hover {
+     background: var(--color-primary-dark);
+}
+
+section.form-area .btn-submit:focus {
+     background: var(--color-primary-dark);
+}
+
+section.form-area .btn-submit:active {
+     background: var(--color-primary-dark);
+}
+
+section.form-area p.switch {
+     text-align: center;
+     margin-top: 1.2rem;
+} 
+
+.line-container {
+     padding: 0 20px;
+     margin-top: .9rem;
+}
+
+.register .line-container {
+     padding: 0 20px;
+     margin-top: .5rem;
+}
+
+.lines {
+     width: 100%;
+     height: 45px;
+     position: relative;
+}
+
+.lines::after, .lines::before {
+     content: "";
+     position: absolute;
+     margin: auto;
+     height: 1px;
+     width: 45%;
+     top: 45%;
+     background: #E5E5E5;
+}
+
+.lines::after {
+     left: 0;
+}
+
+.lines::before {
+     right: 0;
+}
+
+.or {
+     height: 40px;
+     width: 40px;
+     left: 0;
+     right: 0;
+     top: 0;
+     bottom: 0;
+     margin: auto;
+     text-align: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: var(--color-grey-out);
+}
+
+section.form-area .footer {
+     width: 97%;
+     margin: 0 auto;
+     height: 2.6rem;
+     display: flex;
+     justify-content: space-around;
+     margin-top: 1.5rem;
+}
+
+.register section.form-area .footer {
+     margin-top: .2rem;
+}
+
+.login-with-google-btn {
+	 transition: background-color 0.3s, box-shadow 0.3s;
+      width: 15.5rem;
+      height: 2.5rem;
+	 padding: 12px 16px 12px 42px;
+	 border: none;
+	 border-radius: 3px;
+	 box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+	 color: var(--color-white);
+	 font-size: 14px;
+	 font-weight: 400;
+	 background-image: url(../images/icons8-google.svg);
+      background-size: 20px;
+	 background-color: #313131;
+	 background-repeat: no-repeat;
+	 background-position: 12px 11px;
+      cursor: pointer;
+}
+
+.footer .facebook, .footer .twitter {
+     height: 2.5rem;
+     width: 2.5rem;
+     box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .13);
+     background: var(--form-bg);
+     padding: .7rem;
+     border-radius: var(--form-border-radius);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     cursor: pointer;
+}
+
+/* ==================== MEDIA QUERIES FOR TABLETS ================ */
+@media  screen and (max-width: 1024px) {
+
+     /* SIM AREA SECTION */
+     main section.sim-area img {
+          width: 300px;
+     }
+
+     main section.sim-area .virtual-sims {
+          padding: .5rem;
+     }
+
+     main section.sim-area h1 {
+          line-height: 4.2rem;
+          font-size: var(--large-font-hero-tablet);
+     }
+
+     main section.sim-area p {
+          font-size: 1rem;
+          margin-top: 1rem;
+          line-height: 1.3rem;
+     }
+
+     /*   FORM AREA SECTION */
+     main section.form-area form {
+          padding: 1.5rem 2.3rem;
+     }
+
+     .login-with-google-btn {
+          width: 15.5rem;
+          height: 2.5rem;
+	     padding: 9px 9px 9px 30px;
+	     font-size: 12px;
+          background-size: 19px;
+     }
+}
+
+
+
+/* ==================== MEDIA QUERIES FOR MOBILE ================ */
+@media  screen and (max-width: 800px) {
+
+     /* MAIN */
+     main > .container {
+          display: grid;
+          grid-template-columns: 1fr;
+          padding: 0 1rem;
+     }
+
+     /* SIM AREA SECTION */
+     main section.sim-area .container {
+          margin: .7rem 0 0 0;
+          align-items: center;
+          gap: .5rem;
+     }
+
+     main section.sim-area img {
+          width: 300px;
+          align-self: center;
+     }
+
+     main section.sim-area .virtual-sims {
+          padding: .7rem;
+          text-align: center;
+     }
+
+     main section.sim-area h1 {
+          line-height: 2.8rem;
+          font-size: var(--large-font-hero-mobile);
+     }
+
+     main section.sim-area p {
+          font-size: .86rem;
+          margin-top: .5rem;
+          line-height: 1.4rem;
+     }
+
+     /* FORM AREA SECTION */
+
+     main section.form-area {
+          padding: 0;
+     }
+
+     main section.form-area .container {
+          max-width: none;
+     }
+
+     main section.form-area form {
+          top: 65%;
+          padding: .8rem 1rem;
+          border-radius: var(--form-border-radius);
+          box-shadow: 1px 1px 10px var(--color-primary-light);
+     }
+
+     main section.form-area form.register {
+          padding: .3rem 1rem;
+     }
+
+     section.form-area h2.title {
+          margin-bottom: .3rem;
+          font-size: 1.4rem;
+     }
+
+     section.form-area .register h2.title {
+          margin-bottom: .4rem;
+     }
+
+     section.form-area .form-group label {
+          margin-bottom: .6rem;
+          font-size: .85rem;
+     }
+
+     section.form-area .form-group input::placeholder {
+          font-size: .7rem;
+     }
+
+     section.form-area .input-group input {
+          height: var(--form-height);
+     }
+     section.form-area .form-group {
+          margin-bottom: 1rem;
+     }
+
+     section.form-area .btn-submit {
+          padding: var(--form-padding);
+          height: var(--form-height);
+          font-size: .77rem;
+     }
+
+     section.form-area .check label {
+          font-size: var(--font-small-mobile);
+     }
+
+     section.form-area p.switch {
+          font-size: var(--font-small-mobile);
+     } 
+
+     .line-container {
+          padding: 0 20px;
+          margin-top: .4rem;
+     }
+
+     .or {
+          font-size: .83rem;
+     }
+
+     section.form-area .footer {
+          width: 75%;
+          height: var(--form-height-mobile);
+          margin-top: .4rem;
+     }
+
+     .register section.form-area .footer {
+          margin-top: 0;
+     }
+
+     .login-with-google-btn {
+          width: 10rem;
+          height: var(--form-height-mobile);
+	     padding: 8px 12px 8px 38px;
+	     font-size: 10px;
+          background-size: 13px;
+     }
+
+     .footer .facebook, .footer .twitter {
+          height: var(--form-height-mobile);
+          width: var(--form-height-mobile);
+          padding: .55rem;
+     }
+
+}
+
+@media  screen and (max-width: 600px) {
+
+
+      /* SIM AREA SECTION */
+     main section.sim-area img {
+          width: 210px;
+     }
+
+     main section.sim-area .virtual-sims {
+          padding: .7rem;
+     }
+
+     main section.sim-area h1 {
+          line-height: 2.65rem;
+          font-size: 1.6rem;
+     }
+
+     main section.sim-area p {
+          font-size: .81rem;
+          line-height: 1.125rem;
+     }
+}

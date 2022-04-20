@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="theme-color" content="#4385F5">
+     <link rel="stylesheet" href="../assets/css/login.css">
+     <link rel="stylesheet" href="../assets/css/loader.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <title>Account | Easysim</title>
+</head>
+<body>
+     <div class="loading-overlay">
+          <div class="loading-modal">
+               <div class="loading-content">
+                    <i style="display:none" class="fas fa-paw fa-spin text--line-paw"></i>
+                    <svg>
+                         <symbol id="s-text">
+                              <text text-anchor="middle" x="50%" y="35%" class="text--line">
+                                   EasySIM
+                              </text>
+                         </symbol>
+     
+                         <g class="g-ants">
+                              <use xlink:href="#s-text" class="text-copy"></use>
+                              <use xlink:href="#s-text" class="text-copy"></use>
+                              <use xlink:href="#s-text" class="text-copy"></use>
+                              <use xlink:href="#s-text" class="text-copy"></use>
+                              <use xlink:href="#s-text" class="text-copy"></use>
+                         </g>
+     
+                    </svg>
+               </div>
+          </div>
+     </div>
+     <nav>
+          <div class="container">
+               <img src="../assets/images/logo_white.svg" class="nav-brand" alt="">
+          </div>
+     </nav>
+     <main>
+          <div class="container">
+               <section class="sim-area">
+                    <div class="container">
+                         <img src="../assets/images/sim_card_test.jpg" alt="">
+                         <div class="virtual-sims">
+                              <h1>Virtual Sims for <br> Everyone.</h1>
+                              <p>Get your MTN, Glo, Airtel and Etisalat <br> lines and enjoy calls and text messages.</p>
+                         </div>
+                    </div>
+               </section>
+               <section class="form-area">
+               <div class="form-container">
+                    <div class="container">
+                         <form action="#" class="login active">
+                              <h2 class="title">Sign in</h2>
+                              <div class="form-group">
+                                   <label for="email">Email Address</label>
+                                   <div class="input-group">
+                                        <input type="email" id="email" placeholder="Email Address">
+                                   </div>
+                              </div>
+                              <div class="form-group">
+                                   <label for="password">Password</label>
+                                   <div class="input-group">
+                                        <input type="password" id="password" pattern=".{6,}" placeholder="6+ Characters">
+                                        <i class="fas fa-eye"></i>
+                                   </div>
+                              </div>
+                              <div class="form-group check">
+                                   <input type="checkbox" value="" id="">
+                                   <label class="grey-out" for="rememberMe">Keep me logged in.</label>
+                              </div>
+                              <button type="submit" class="btn-submit">Continue to account</button>
+                              <p class="switch grey-out">Don't have an account? <a href="#" onclick="switchForm('register', event)">Sign up</a></p>
+                              <div class="line-container">
+                                   <div class="lines">
+                                        <div class="or">Or</div>
+                                   </div>
+                              </div>
+                              <div class="footer">
+                                   <button type="button" class="login-with-google-btn">
+                    
+                                        <p>Continue with Google</p>
+                                   </button>
+                                   <div class="facebook">
+                                        <img src="../assets/images/icons8-facebook.svg" alt="">
+                                   </div>
+                                   <div class="twitter">
+                                        <img src="../assets/images/icons8-twitter.svg" alt="">
+                                   </div>
+                              </div>
+                         </form>
+                    
+                         <form action="#" class="register">
+                              <h2 class="title">Sign up</h2>
+                              <div class="form-group">
+                                   <label for="name">Full Name</label>
+                                   <div class="input-group">
+                                        <input type="name" id="name" placeholder="Your Full Name">
+                                   </div>
+                              </div>
+                              <div class="form-group">
+                                   <label for="email">Email Address</label>
+                                   <div class="input-group">
+                                        <input type="email" id="email" placeholder="Email Address">
+                                   </div>
+                              </div>
+                              <div class="form-group">
+                                   <label for="password">Password</label>
+                                   <div class="input-group">
+                                        <input type="password" id="password" pattern=".{6,}" placeholder="6+ Characters">
+                                        <i class="fas fa-eye"></i>
+                                   </div>
+                              </div>
+                              <div class="form-group check">
+                                   <input type="checkbox" value="" id="">
+                                   <label for="acceptMe" class="grey-out">I confirm that I accept the <a href="#">Terms and Conditions</a>
+                                        and <a href="#">Privacy Policy</a></label>
+                              </div>
+                              <button type="submit" class="btn-submit">Create account</button>
+                              <p class="switch grey-out">Already a member? <a href="#" onclick="switchForm('login', event)">Sign in</a></p>
+                              <div class="line-container">
+                                   <div class="lines">
+                                        <div class="or">Or</div>
+                                   </div>
+                              </div>
+                              <div class="footer">
+                                   <button type="button" class="login-with-google-btn">
+                                        Sign in with Google
+                                   </button>
+                                   <div class="facebook">
+                                        <img src="../assets/images/icons8-facebook.svg" alt="">
+                                   </div>
+                                   <div class="twitter">
+                                        <img src="../assets/images/icons8-twitter.svg" alt="">
+                                   </div>
+                              </div>
+                         </form>
+                    
+                    </div>
+               </div>
+               </section>
+          </div>
+     </main>
+     <script src="../assets/scripts/login.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+          integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script>
+          setTimeout(function () {
+               $('.loading-overlay').fadeToggle();
+          }, 1500);
+     </script>
+</body>
+</html>
