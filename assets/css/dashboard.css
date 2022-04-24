@@ -2128,13 +2128,14 @@ input:checked + .switch:active::before {
      padding: var(--dashboard-card-padding);
      display: flex;
      flex-direction: column;
-     gap: 1rem
+     gap: 1.4rem
 }
 
 .wallet-wrapper .bottom-row .action-area.transaction-area .transactions .time-stamp {
      font-size: .75rem;
      font-weight: 400;
      color: var(--color-grey-font);
+     text-transform: uppercase;
 }
 
 .wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field {
@@ -2179,12 +2180,25 @@ input:checked + .switch:active::before {
      display: flex;
      align-items: center;
      gap: .2rem;
+     position: relative;
 }
 
 .wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .right img {
+     display: none;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .right img:nth-child(2), 
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .right img:nth-child(4) {
      width: 14px;
      margin-bottom: .1rem;
-     display: none;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .right img:nth-child(1), 
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .right img:nth-child(3) {
+     width: 8px;
+     position: absolute;
+     top: 2px;
+     left: -6px;
 }
 
 .wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .right p {
@@ -2196,6 +2210,7 @@ input:checked + .switch:active::before {
      color: var(--color-primary);
 }
 
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field.credit .right img:nth-child(2), 
 .wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field.credit .right img:nth-child(1) {
      display: block;
 }
@@ -2204,6 +2219,7 @@ input:checked + .switch:active::before {
      color: var(--dashboard-card-font-color);
 }
 
-.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field.debit .right img:nth-child(2) {
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field.debit .right img:nth-child(4), 
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field.debit .right img:nth-child(3) {
      display: block;
 }
