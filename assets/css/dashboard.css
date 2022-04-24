@@ -1536,10 +1536,9 @@ input:checked + .switch:active::before {
      border-radius: var(--dashboard-card-radius);
 }
 
-.sub-plan-wrapper .content-header .renew {
+.content-header .renew {
      background: var(--color-white);
      width: 50%;
-     min-width: 300px;
      display: flex;
      justify-content: space-between;
      align-items: center;
@@ -1804,17 +1803,407 @@ input:checked + .switch:active::before {
      height: 2.5rem;
 }
 
-.port-wrapper .content-body .card-container.lg.out .details .form-group select option {
-     background: url("../images/mtn-inner.png");
-}
-
 .port-wrapper .content-body .card-container.lg .button-container {
      align-items: flex-end;
 }
 
 
+/* ========= WALLET ======= */
+.wallet-wrapper {
+     padding: var(--dashboard-wrapper-padding);
+}
+
+.wallet-wrapper .content-header {
+     height: 3rem;
+     display: flex;
+     width: 100%;
+     font-weight: 500;
+     font-size: 1rem;
+}
+      /*  Full style in subscription  */
+.wallet-wrapper .content-header .renew {
+     width: 70%;
+     color: var(--color-primary);
+}
+
+.wallet-wrapper .content-body {
+     margin-top: 1.5rem;
+     max-width: 100%;
+}
+
+.wallet-wrapper .content-body .top-row {
+     height: 200px;
+     display: flex;
+     max-width: 100%;
+     gap: 1.5rem;
+}
+
+.wallet-wrapper .content-body .top-row .card-container {
+     width: 300px;
+     height: 100%;
+     display: grid;
+     grid-template-rows: 1fr 1fr 1fr;
+     padding: var(--dashboard-card-padding);
+     border-radius: var(--dashboard-card-radius);
+     background: var(--color-white);
+}
+
+.wallet-wrapper .content-body .top-row .card-container > * {
+     display: flex;
+}
+
+.wallet-wrapper .content-body .top-row .card-container .balance {
+     justify-content: center;
+     align-items: center;
+     gap: .7rem;
+}
+
+.wallet-wrapper .content-body .top-row .card-container .balance h2 {
+     font-size: 2.8rem;
+     font-weight: 500;
+     color: var(--color-primary);
+}
+
+.wallet-wrapper .content-body .top-row .card-container .balance img {
+     width: 47px;
+     margin-bottom: .2rem;
+}
+
+.wallet-wrapper .content-body .top-row .card-container .footer {
+     justify-content: space-between;
+     align-items: flex-end;
+}
+
+.wallet-wrapper .content-body .top-row .card-container .footer * {
+     font-weight: 500;
+     font-size: .8rem;
+     color: var(--color-grey-font);
+}
+
+.wallet-wrapper .content-body .top-row .card-container .footer .copy-container {
+     height: 55%;
+}
+
+.wallet-wrapper .content-body .top-row .card-container .footer .copy-container img {
+     width: 18px;
+     cursor: pointer;
+}
+
+.wallet-wrapper .content-body .top-row .chart-container {
+     background: var(--color-white);
+     padding: var(--dashboard-card-padding);
+     border-radius: var(--dashboard-card-radius);
+     width: 67%;
+     height: 100%;  
+     display: flex;
+     flex-direction: column; 
+}
+
+.wallet-wrapper .content-body .top-row .chart-container #myChart {
+     max-width: 100%;
+}
+
+.wallet-wrapper .content-body .bottom-row {
+     width: 100%;
+     margin-top: 1.5rem;
+     display: grid;
+     gap: 1.5rem;
+     grid-template-columns: minmax(0, 1fr) 1fr;
+}
+
+.wallet-wrapper .content-body .bottom-row .action-area {
+     width: 100%;
+}
+
+.wallet-wrapper .content-body .bottom-row .action-area .action-container {
+     width: 100%;
+}
+
+.wallet-wrapper .bottom-row .action-area .action-container .action-header {
+     width: 100%;
+     height: 41px;
+     display: flex;
+     background: var(--color-white);
+     border-radius: var(--dashboard-card-radius);
+     border-bottom-left-radius: 0;
+     border-bottom-right-radius: 0;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-container .action-header button {
+     font-size: .9rem;
+     font-weight: 500;
+     width: 50%;
+     display: flex;
+     align-items: center;
+     padding: var(--dashboard-card-padding);
+     color: var(--color-grey-font);
+     cursor: pointer;
+     background: transparent;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-container .action-header button:hover {
+     color: var(--color-primary);
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-container .action-header button.active {
+     color: var(--color-primary);
+     border-bottom: 2px solid var(--color-primary);
+}
+
+
+/*
+.slide-form {
+     margin-left: -66.6666667%;
+}   */
 
 
 
+.wallet-wrapper .bottom-row .action-area .action-container .action-body {
+     width: 100%;
+     background: var(--color-white);
+     margin-top: .2rem;
+     border-radius: var(--dashboard-card-radius);
+     border-top-left-radius: 0;
+     border-top-right-radius: 0;
+     overflow: hidden;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-container .action-body .body-wrapper {
+     width: 300%;
+     display: flex;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-container .action-body .body-wrapper .wallet {
+     padding: var(--dashboard-card-padding);
+     width: 33.3333333333333333%;   
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet {
+     width: 100%;
+     transition: margin-left 0.3s ease-in-out;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet form {
+     width: 100%;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet .header {
+     display: flex;
+     justify-content: space-between;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.withdraw .header, 
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.send .header {
+     flex-direction: column;
+     margin-bottom: 1.5rem;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.withdraw .header .new-account {
+     display: flex;
+     justify-content: space-between;
+     margin-top: .7rem;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.withdraw .header .new-account p {
+     font-size: .8rem;
+     font-weight: 500;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.send .header .transfer-group h3 {
+     font-size: .8rem;
+     font-weight: 500;
+     color: var(--color-grey-outline);
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.send .header .transfer-contacts {
+     display: flex;
+     justify-content: space-between;
+     width: 75%;
+     margin-top: .8rem;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.send .header .transfer-contacts button {
+     background: transparent;
+     cursor: pointer;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.send .header .transfer-contacts img {
+     width: 41px;
+     border-radius: 50%;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet .header h2 {
+     font-size: 1.15rem;
+     font-weight: 500;
+     color: var(--color-primary);
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.deposit .header img {
+     width: 200px;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.withdraw .header img {
+     width: 14px;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet .body {
+     display: flex;
+     flex-direction: column;
+     gap: .5rem;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.withdraw .body {
+     gap: 1rem;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.send .body {
+     gap: 1rem;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet .body label {
+     font-size: .8rem;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet .body input, 
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet .body select {
+     height: 2.8rem;
+     margin-top: .1rem;
+     padding-left: 1rem;
+     font-size: .9rem;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.deposit .body .input-group.svg-area {
+     position: relative;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.deposit .body .card-info {
+     display: flex;
+     width: 70%;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.deposit .body .card-info .form-group:nth-child(1) {
+     margin-right: 1rem;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.deposit .body .card-info .form-group:nth-child(2) {
+     margin-left: 1rem;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.deposit .body svg.ccicon {
+    height: 38px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    width: 50px;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet .body button {
+     margin-top: 1.2rem;
+}
 
 
+/*=======TRANSACTION HISTORY========*/
+.wallet-wrapper .bottom-row .action-area.transaction-area .action-header {
+     padding: var(--dashboard-card-padding);
+     padding-top: 0;
+     padding-bottom: 0;
+     align-items: center;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .action-header h2 {
+     font-size: .9rem;
+     font-weight: 500;
+     color: var(--color-grey-font);
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .action-body {
+     height: 465px;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .action-body img {
+     width: 12px;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .action-body .transactions {
+     padding: var(--dashboard-card-padding);
+     display: flex;
+     flex-direction: column;
+     gap: 1rem
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .time-stamp {
+     font-size: .75rem;
+     font-weight: 400;
+     color: var(--color-grey-font);
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field {
+     display: flex;
+     justify-content: space-between;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .left {
+     display: flex;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .left .account-head p {
+     background: var(--color-primary);
+     color: var(--color-white);
+     padding: 0 .3rem;
+     font-weight: 500;
+     font-size: 1.25rem;
+     display: flex;
+     text-transform: uppercase;
+     align-content: center;
+     border-radius: 5px;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .left .account-details {
+     display: flex;
+     flex-direction: column;
+     margin-left: .5rem;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .left .account-details .account-name {
+     font-size: .75rem;
+     font-weight: 500;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .left .account-details .account-time {
+     font-size: .5rem;
+     font-weight: 500;
+     color: var(--border-outline-multistep);
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .right {
+     display: flex;
+     align-items: center;
+     gap: .2rem;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .right img {
+     width: 14px;
+     margin-bottom: .1rem;
+     display: none;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .right p {
+     font-size: .75rem;
+     font-weight: 500;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field.credit .right p {
+     color: var(--color-primary);
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field.credit .right img:nth-child(1) {
+     display: block;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field.debit .right p {
+     color: var(--dashboard-card-font-color);
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field.debit .right img:nth-child(2) {
+     display: block;
+}
