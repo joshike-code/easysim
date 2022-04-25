@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../assets/css/dashboard.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <title>Subscription | EasySIM</title>
+</head>
+<body>
+     <nav class="dash-nav">
+          <div class="container">
+               <img src="../assets/images/logo_blue.svg" alt="" class="nav-brand">
+               <div class="search-bar">
+                    <img src="../assets/images/search_grey.svg" alt="">
+                    <input type="search" placeholder="Search EasySIM">
+               </div>
+               <div class="profile-area">
+                    <div class="theme-btn">
+                         <img src="../assets/images/light_mode_white.svg" alt="" class="active">
+                         <img src="../assets/images/dark_mode_black.svg" alt="" >
+                    </div>
+                    <div class="profile">
+                         <div class="profile-photo">
+                              <img src="../assets/images/profile_photo.svg" alt="">
+                         </div>
+                         <h5>Sunday</h5>
+                         <img src="../assets/images/profile_more.svg" alt="">
+                    </div>
+               </div>
+          </div>
+     </nav>
+     <!--==============END OF NAVBAR============-->
+
+     <!--==============MAIN (ASIDE | CONTENT | RIGHT)============-->
+     <main class="col1">
+          <div class="container">
+               <aside>
+                    <header>
+                         <div class="head-container">
+                              <img src="../assets/images/logo_blue.svg" alt="" class="nav-brand">
+                              <button class="close-btn"><img src="../assets/images/close_black.svg" alt=""></button>
+                         </div>
+                    </header>
+                    <div class="sidebar">
+                         <div class="form-group">
+                              <label for="myNumber">Active Number</label>
+                              <div class="input-group">
+                                   <select name="myNumber" id="myNumber">
+                                        <option value="+2349064283752" selected>+234 906 428 3752</option>
+                                        <option value="+2346420854521" >+234 642 085 4521</option>
+                                        <option value="+2343267324339" >+234 326 732 4339</option>
+                                        <option value="+2343845231055" >+234 384 523 1055</option>
+                                        <option value="+2346312978428" >+234 631 297 8428</option>
+                                        <option value="+2349048537292" >+234 904 853 7292</option>
+                                   </select>
+                              </div>
+                         </div>
+                         <a href="contacts.html">
+                              <img src="../assets/images/contacts_normal.svg" alt="">
+                              <h4>Contacts</h4>
+                         </a>
+                         <a href="calls.html">
+                              <img src="../assets/images/calls_normal.svg" alt="">
+                              <h4>Calls</h4>
+                         </a>
+                         <a href="messages.html">
+                              <img src="../assets/images/message_normal.svg" alt="">
+                              <h4>Messages</h4>
+                         </a>
+                         <a href="#" class="active">
+                              <img src="../assets/images/subplans_active.svg" alt="">
+                              <h4>Subscription Plans</h4>
+                         </a>
+                         <a href="port.html">
+                              <img src="../assets/images/portsim_normal.svg" alt="">
+                              <h4>Port SIM</h4>
+                         </a>
+                         <a href="wallet.html">
+                              <img src="../assets/images/wallet_normal.svg" alt="">
+                              <h4>Wallet</h4>
+                         </a>
+                         <a href="settings/account.html">
+                              <img src="../assets/images/settings_normal.svg" alt="">
+                              <h4>Settings</h4>
+                         </a>
+                         <a href="#">
+                              <img src="../assets/images/logout_normal.svg" alt="">
+                              <h4>Log out</h4>
+                         </a>
+                    </div>
+               </aside>
+               <!--==============END OF ASIDE============-->
+               
+               <section class="content">
+                    <div class="content-container">
+                         <h1>SUBSCRIPTION PLANS</h1>
+                         <!--SUB PLANS-->
+                         <div class="content-wrapper">
+                              <div class="sub-plan-wrapper">
+                                   <div class="content-header">
+                                        <div class="mobile-number">
+                                             <img src="../assets/images/mtn-inner.png" alt="">
+                                             <p>0904 428 3752</p>
+                                        </div>
+                                        <div class="renew">
+                                             <p>Automatically renew subscription</p>
+                                             <div class="switch-wrapper">
+                                                  <input type="checkbox" checked hidden="hidden" id="sub-renew">
+                                                  <label class="switch" for="sub-renew"></label>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="content-body">
+                                        <div class="card-column">
+                                             <div class="card-container card1">
+                                                  <div class="sub-plan">
+                                                       <h3 class="card-header">Current Subscription</h3>
+                                                  </div>
+                                                  <div class="sub-amount">
+                                                       <img src="../assets/images/Naira.svg" alt="N">
+                                                       <p><span>1,200</span>/Year</p>
+                                                  </div>
+                                                  <div class="sub-details">
+                                                       <div class="sub-details-left">
+                                                            <p>Purchase: 1st Jan, 2021</p>
+                                                            <p>Expires: 1st Jan, 2022</p>
+                                                       </div>
+                                                       <div class="sub-details-right">
+                                                            <p><span>36</span> <span>Days left</span></p>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="card-container card2">
+                                                  <div class="sub-plan">
+                                                       <h3 class="card-header">Renew Subscription</h3>
+                                                  </div>
+                                                  <div class="sub-amount">
+                                                       <img src="../assets/images/Naira.svg" alt="N">
+                                                       <p><span>1,200</span>/Year</p>
+                                                  </div>
+                                                  <div class="sub-details">
+                                                       <div class="sub-details-left">
+                                                            <p>Purchase: Nil</p>
+                                                            <p>Expires: Nil</p>
+                                                       </div>
+                                                       <div class="sub-details-right">
+                                                            <p><span>356</span> <span>Days left</span></p>
+                                                       </div>
+                                                  </div>
+                                                  <div class="button-container">
+                                                       <button class="card-button">Renew</button>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="table-column">
+                                             <div class="sub-table">
+                                                  <div class="table-title">
+                                                       <h3 class="card-header">Subscription History</h3>
+                                                  </div>
+                                                  <div class="table table-head">
+                                                       <div class="date">DATE</div>
+                                                       <div class="details">DETAILS</div>
+                                                       <div class="amount">AMOUNT</div>
+                                                       <div class="time">TIME</div>
+                                                  </div>
+                                                  <div class="table table-body">
+                                                       <div class="date">1st Jan, 2020</div>
+                                                       <div class="details">Basic plan, yearly</div>
+                                                       <div class="amount"><img src="../assets/images/table-naira.svg" alt="">1,200</div>
+                                                       <div class="time">12:40AM</div>
+                                                  </div>
+                                                  <div class="table table-body">
+                                                       <div class="date">1st Jan, 2021</div>
+                                                       <div class="details">Basic plan, yearly</div>
+                                                       <div class="amount"><img src="../assets/images/table-naira.svg" alt="">1,200</div>
+                                                       <div class="time">3:32PM</div>
+                                                  </div>
+                                                  <div class="table table-body">
+                                                       <div class="date">1st Jan, 2021</div>
+                                                       <div class="details">Basic plan, yearly</div>
+                                                       <div class="amount"><img src="../assets/images/table-naira.svg" alt="">1,200</div>
+                                                       <div class="time">2:15PM</div>
+                                                  </div>
+                                                  <div class="table table-body">
+                                                       <div class="date">1st Jan, 2021</div>
+                                                       <div class="details">Basic plan, yearly</div>
+                                                       <div class="amount"><img src="../assets/images/table-naira.svg" alt="">1,200</div>
+                                                       <div class="time">11:26AM</div>
+                                                  </div>
+                                                  <div class="table table-body">
+                                                       <div class="date">1st Jan, 2022</div>
+                                                       <div class="details">Basic plan, yearly</div>
+                                                       <div class="amount"><img src="../assets/images/table-naira.svg" alt="">1,200</div>
+                                                       <div class="time">4:09PM</div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </section>
+               <!--==============END OF CONTENT============-->
+               <div class="separator"></div>
+          </div>
+     </main>
+     <script src="../assets/scripts/main.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+          integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+</body>
+</html>

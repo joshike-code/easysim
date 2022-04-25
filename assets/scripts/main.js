@@ -115,4 +115,3 @@ function toggleEmojiDrawer() {
     drawer.classList.add('hidden');
   }
 }
-

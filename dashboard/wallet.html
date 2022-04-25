@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../assets/css/dashboard.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <title>Wallet | EasySIM</title>
+</head>
+<body>
+     <nav class="dash-nav">
+          <div class="container">
+               <img src="../assets/images/logo_blue.svg" alt="" class="nav-brand">
+               <div class="search-bar">
+                    <img src="../assets/images/search_grey.svg" alt="">
+                    <input type="search" placeholder="Search EasySIM">
+               </div>
+               <div class="profile-area">
+                    <div class="theme-btn">
+                         <img src="../assets/images/light_mode_white.svg" alt="" class="active">
+                         <img src="../assets/images/dark_mode_black.svg" alt="" >
+                    </div>
+                    <div class="profile">
+                         <div class="profile-photo">
+                              <img src="../assets/images/profile_photo.svg" alt="">
+                         </div>
+                         <h5>Sunday</h5>
+                         <img src="../assets/images/profile_more.svg" alt="">
+                    </div>
+               </div>
+          </div>
+     </nav>
+     <!--==============END OF NAVBAR============-->
+
+     <!--==============MAIN (ASIDE | CONTENT | RIGHT)============-->
+     <main class="col1">
+          <div class="container">
+               <aside>
+                    <header>
+                         <div class="head-container">
+                              <img src="../assets/images/logo_blue.svg" alt="" class="nav-brand">
+                              <button class="close-btn"><img src="../assets/images/close_black.svg" alt=""></button>
+                         </div>
+                    </header>
+                    <div class="sidebar">
+                         <div class="form-group">
+                              <label for="myNumber">Active Number</label>
+                              <div class="input-group">
+                                   <select name="myNumber" id="myNumber">
+                                        <option value="+2349064283752" selected>+234 906 428 3752</option>
+                                        <option value="+2346420854521" >+234 642 085 4521</option>
+                                        <option value="+2343267324339" >+234 326 732 4339</option>
+                                        <option value="+2343845231055" >+234 384 523 1055</option>
+                                        <option value="+2346312978428" >+234 631 297 8428</option>
+                                        <option value="+2349048537292" >+234 904 853 7292</option>
+                                   </select>
+                              </div>
+                         </div>
+                         <a href="contacts.html">
+                              <img src="../assets/images/contacts_normal.svg" alt="">
+                              <h4>Contacts</h4>
+                         </a>
+                         <a href="calls.html">
+                              <img src="../assets/images/calls_normal.svg" alt="">
+                              <h4>Calls</h4>
+                         </a>
+                         <a href="messages.html">
+                              <img src="../assets/images/message_normal.svg" alt="">
+                              <h4>Messages</h4>
+                         </a>
+                         <a href="subscription.html">
+                              <img src="../assets/images/subplans_normal.svg" alt="">
+                              <h4>Subscription Plans</h4>
+                         </a>
+                         <a href="port.html">
+                              <img src="../assets/images/portsim_normal.svg" alt="">
+                              <h4>Port SIM</h4>
+                         </a>
+                         <a href="#" class="active">
+                              <img src="../assets/images/wallet_active.svg" alt="">
+                              <h4>Wallet</h4>
+                         </a>
+                         <a href="settings/account.html">
+                              <img src="../assets/images/settings_normal.svg" alt="">
+                              <h4>Settings</h4>
+                         </a>
+                         <a href="#">
+                              <img src="../assets/images/logout_normal.svg" alt="">
+                              <h4>Log out</h4>
+                         </a>
+                    </div>
+               </aside>
+               <!--==============END OF ASIDE============-->
+               
+               <section class="content">
+                    <div class="content-container">
+                         <h1>WALLET</h1>
+                         <!--WALLET-->
+                         <div class="content-wrapper">
+                              <div class="wallet-wrapper">
+                                   <div class="content-header">
+                                        <div class="renew">
+                                             <p>Automatically renew subscription</p>
+                                             <div class="switch-wrapper">
+                                                  <input type="checkbox" checked hidden="hidden" id="sub-renew">
+                                                  <label class="switch" for="sub-renew"></label>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="content-body">
+                                        <div class="top-row">
+                                             <div class="card-container">
+                                                  <div class="card-title">
+                                                       <h3 class="card-header">Balance</h3>
+                                                  </div>
+                                                  <div class="balance">
+                                                       <img src="../assets/images/naira_balance.svg" alt="">
+                                                       <h2>70,000</h2>
+                                                  </div>
+                                                  <div class="footer">
+                                                       <div class="wallet-id">
+                                                            <h5>Wallet ID:</h5>
+                                                            <p>1109654789dc</p>
+                                                       </div>
+                                                       <div class="copy-container">
+                                                            <img src="../assets/images/copy_balance.svg" alt="">
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="chart-container">
+                                                  <h3 class="card-header">Activity</h3>
+                                                  <canvas id="myChart" width="300" height="70"></canvas> 
+                                             </div>
+                                        </div>
+                                        <div class="bottom-row">
+                                             <div class="action-area wallet-area">
+                                                  <div class="action-container">
+                                                       <div class="action-header">
+                                                            <button class="button-dep active">Deposit</button>
+                                                            <button class="button-with">Withdraw</button>
+                                                            <button class="button-send">Send</button>
+                                                       </div>
+                                                       <div class="action-body">
+                                                            <div class="body-wrapper">
+                                                                 <div class="wallet deposit slide-form">
+                                                                      <form action="#">
+                                                                           <div class="header">
+                                                                                <h2>Payment Options</h2>
+                                                                                <img src="../assets/images/payment_logos.svg" alt="">
+                                                                           </div>
+                                                                           <div class="body">
+                                                                                <div class="form-group">
+                                                                                     <label for="name">Cardholder Name</label>
+                                                                                     <div class="input-group">
+                                                                                          <input type="name" id="name">
+                                                                                     </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                     <label for="cardnumber">Card Number</label>
+                                                                                     <div class="input-group svg-area">
+                                                                                          <input type="text" pattern="[0-9]*" inputmode="numeric" id="cardnumber">
+                                                                                          <svg id="ccicon" class="ccicon" width="750" height="471" viewBox="0 0 750 471" version="1.1"
+                                                                                               xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                                          </svg>
+                                                                                     </div>
+                                                                                </div>
+                                                                                <div class="card-info">
+                                                                                     <div class="form-group">
+                                                                                          <label for="expirationdate">Expiry Date</label>
+                                                                                          <div class="input-group">
+                                                                                               <input type="text" pattern="[0-9]*" inputmode="numeric" id="expirationdate">
+                                                                                          </div>
+                                                                                     </div>
+                                                                                     <div class="form-group">
+                                                                                          <label for="securitycode">Security code</label>
+                                                                                          <div class="input-group">
+                                                                                               <input type="text" pattern="[0-9]*" inputmode="numeric" id="securitycode">
+                                                                                          </div>
+                                                                                     </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                     <label for="deposit-amount">Deposit Amount</label>
+                                                                                     <div class="input-group">
+                                                                                          <input input type="text" pattern="[0-9]*" inputmode="numeric" id="deposit-amount">
+                                                                                     </div>
+                                                                                </div>
+                                                                                <button class="card-button">Deposit</button>
+                                                                           </div>
+                                                                      </form>
+                                                                 </div>
+
+                                                                 <div class="wallet withdraw">
+                                                                      <form action="#">
+                                                                           <div class="header">
+                                                                                <h2>Withdraw Money</h2>
+                                                                                <div class="new-account">
+                                                                                     <p>Add new account</p>
+                                                                                     <img src="../assets/images/plus.svg" alt="">
+                                                                                </div>
+                                                                           </div>
+                                                                           <div class="body">
+                                                                                <div class="form-group">
+                                                                                     <label for="bank">Pick a bank</label>
+                                                                                     <div class="input-group input-select">
+                                                                                          <select name="bank" id="bank" placeholder="Pick a bank">
+                                                                                               <option value="access-bank">Access Bank</option>
+                                                                                               <option value="fcmb">FCMB</option>
+                                                                                               <option value="uba">UBA</option>
+                                                                                               <option value="union-bank">Union bank</option>
+                                                                                               <option value="zenith-bank">Zenith bank</option>
+                                                                                               <option value="gtb">GTB</option>
+                                                                                          </select>
+                                                                                     </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                     <label for="withdraw-amount">Withdrawal amount</label>
+                                                                                     <div class="input-group">
+                                                                                          <input type="text" pattern="[0-9]*" inputmode="numeric" id="withdraw-amount">
+                                                                                     </div>
+                                                                                </div>
+                                                                                <button class="card-button">Withdraw</button>
+                                                                           </div>
+                                                                      </form>
+                                                                 </div>
+
+                                                                 <div class="wallet send">
+                                                                      <form action="#">
+                                                                           <div class="header">
+                                                                                <h2>Transfer</h2>
+                                                                                <div class="transfer-group">
+                                                                                     <h3>Quick transfer</h3>
+                                                                                     <div class="transfer-contacts">
+                                                                                          <button><img src="../assets/images/Img6.png" alt=""></button>
+                                                                                          <button><img src="../assets/images/Img8.png" alt=""></button>
+                                                                                          <button><img src="../assets/images/Img8.png" alt=""></button>
+                                                                                          <button><img src="../assets/images/Img6.png" alt=""></button>
+                                                                                          <button><img src="../assets/images/Img6.png" alt=""></button>
+                                                                                          <button><img src="../assets/images/Img8.png" alt=""></button>
+                                                                                     </div>
+                                                                                </div>
+                                                                           </div>
+                                                                           <div class="body">
+                                                                                <div class="form-group">
+                                                                                     <label for="wallet">Wallet ID</label>
+                                                                                     <div class="input-group svg-area">
+                                                                                          <input type="text" pattern="[0-9]*" inputmode="numeric" id="wallet">
+                                                                                     </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                     <label for="account-name">Account Name</label>
+                                                                                     <div class="input-group">
+                                                                                          <input type="name" id="account-name">
+                                                                                     </div>
+                                                                                </div>
+                                                                                <button class="card-button">Deposit</button>
+                                                                           </div>
+                                                                      </form>
+                                                                 </div>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="transaction-history">
+                                                  <div class="action-area transaction-area">
+                                                       <div class="action-container">
+                                                            <div class="action-header">
+                                                                 <h2>Transaction History</h2>
+                                                            </div>
+                                                            <div class="action-body">
+                                                                 <div class="body-wrapper">
+                                                                      <div class="transactions">
+                                                                           <span class="time-stamp">Today</span>
+                                                                           <div class="account-field credit">
+                                                                                <div class="left">
+                                                                                     <div class="account-head">
+                                                                                          <p>M</p>
+                                                                                     </div>
+                                                                                     <div class="account-details">
+                                                                                          <div class="account-name">
+                                                                                               My Access
+                                                                                          </div>
+                                                                                          <div class="account-time">
+                                                                                               12:48PM
+                                                                                          </div>
+                                                                                     </div>
+                                                                                </div>
+                                                                                <div class="right">
+                                                                                     <img src="../assets/images/cross_trans_blue.svg" alt="">
+                                                                                     <img src="../assets/images/Naira_trans_blue.svg" alt="">
+                                                                                     <img src="../assets/images/cross_trans_black.svg" alt="">
+                                                                                     <img src="../assets/images/Naira_trans_black.svg" alt="">
+                                                                                     <p>4,500</p>
+                                                                                </div>
+                                                                           </div>
+
+                                                                           <div class="account-field credit">
+                                                                                <div class="left">
+                                                                                     <div class="account-head">
+                                                                                          <p>M</p>
+                                                                                     </div>
+                                                                                     <div class="account-details">
+                                                                                          <div class="account-name">
+                                                                                               My Access
+                                                                                          </div>
+                                                                                          <div class="account-time">
+                                                                                               12:48PM
+                                                                                          </div>
+                                                                                     </div>
+                                                                                </div>
+                                                                                <div class="right">
+                                                                                     <img src="../assets/images/cross_trans_blue.svg" alt="">
+                                                                                     <img src="../assets/images/Naira_trans_blue.svg" alt="">
+                                                                                     <img src="../assets/images/cross_trans_black.svg" alt="">
+                                                                                     <img src="../assets/images/Naira_trans_black.svg" alt="">
+                                                                                     <p>4,500</p>
+                                                                                </div>
+                                                                           </div>
+
+                                                                           <div class="account-field debit">
+                                                                                <div class="left">
+                                                                                     <div class="account-head">
+                                                                                          <p>M</p>
+                                                                                     </div>
+                                                                                     <div class="account-details">
+                                                                                          <div class="account-name">
+                                                                                               My Access
+                                                                                          </div>
+                                                                                          <div class="account-time">
+                                                                                               12:48PM
+                                                                                          </div>
+                                                                                     </div>
+                                                                                </div>
+                                                                                <div class="right">
+                                                                                     <img src="../assets/images/cross_trans_blue.svg" alt="">
+                                                                                     <img src="../assets/images/Naira_trans_blue.svg" alt="">
+                                                                                     <img src="../assets/images/cross_trans_black.svg" alt="">
+                                                                                     <img src="../assets/images/Naira_trans_black.svg" alt="">
+                                                                                     <p>4,500</p>
+                                                                                </div>
+                                                                           </div>
+
+                                                                           <span class="time-stamp">Yesterday</span>
+
+                                                                           <div class="account-field credit">
+                                                                                <div class="left">
+                                                                                     <div class="account-head">
+                                                                                          <p>M</p>
+                                                                                     </div>
+                                                                                     <div class="account-details">
+                                                                                          <div class="account-name">
+                                                                                               My Access
+                                                                                          </div>
+                                                                                          <div class="account-time">
+                                                                                               12:48PM
+                                                                                          </div>
+                                                                                     </div>
+                                                                                </div>
+                                                                                <div class="right">
+                                                                                     <img src="../assets/images/cross_trans_blue.svg" alt="">
+                                                                                     <img src="../assets/images/Naira_trans_blue.svg" alt="">
+                                                                                     <img src="../assets/images/cross_trans_black.svg" alt="">
+                                                                                     <img src="../assets/images/Naira_trans_black.svg" alt="">
+                                                                                     <p>4,500</p>
+                                                                                </div>
+                                                                           </div>
+
+                                                                           <div class="account-field credit">
+                                                                                <div class="left">
+                                                                                     <div class="account-head">
+                                                                                          <p>M</p>
+                                                                                     </div>
+                                                                                     <div class="account-details">
+                                                                                          <div class="account-name">
+                                                                                               My Access
+                                                                                          </div>
+                                                                                          <div class="account-time">
+                                                                                               12:48PM
+                                                                                          </div>
+                                                                                     </div>
+                                                                                </div>
+                                                                                <div class="right">
+                                                                                     <img src="../assets/images/cross_trans_blue.svg" alt="">
+                                                                                     <img src="../assets/images/Naira_trans_blue.svg" alt="">
+                                                                                     <img src="../assets/images/cross_trans_black.svg" alt="">
+                                                                                     <img src="../assets/images/Naira_trans_black.svg" alt="">
+                                                                                     <p>4,500</p>
+                                                                                </div>
+                                                                           </div>
+
+                                                                           <div class="account-field debit">
+                                                                                <div class="left">
+                                                                                     <div class="account-head">
+                                                                                          <p>M</p>
+                                                                                     </div>
+                                                                                     <div class="account-details">
+                                                                                          <div class="account-name">
+                                                                                               My Access
+                                                                                          </div>
+                                                                                          <div class="account-time">
+                                                                                               12:48PM
+                                                                                          </div>
+                                                                                     </div>
+                                                                                </div>
+                                                                                <div class="right">
+                                                                                     <img src="../assets/images/cross_trans_blue.svg" alt="">
+                                                                                     <img src="../assets/images/Naira_trans_blue.svg" alt="">
+                                                                                     <img src="../assets/images/cross_trans_black.svg" alt="">
+                                                                                     <img src="../assets/images/Naira_trans_black.svg" alt="">
+                                                                                     <p>4,500</p>
+                                                                                </div>
+                                                                           </div>
+
+                                                                           <div class="account-field debit">
+                                                                                <div class="left">
+                                                                                     <div class="account-head">
+                                                                                          <p>M</p>
+                                                                                     </div>
+                                                                                     <div class="account-details">
+                                                                                          <div class="account-name">
+                                                                                               My Access
+                                                                                          </div>
+                                                                                          <div class="account-time">
+                                                                                               12:48PM
+                                                                                          </div>
+                                                                                     </div>
+                                                                                </div>
+                                                                                <div class="right">
+                                                                                     <img src="../assets/images/cross_trans_blue.svg" alt="">
+                                                                                     <img src="../assets/images/Naira_trans_blue.svg" alt="">
+                                                                                     <img src="../assets/images/cross_trans_black.svg" alt="">
+                                                                                     <img src="../assets/images/Naira_trans_black.svg" alt="">
+                                                                                     <p>4,500</p>
+                                                                                </div>
+                                                                           </div>
+
+                                                                      </div>
+                                                                 </div>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </section>
+               <!--==============END OF CONTENT============-->
+               <div class="separator"></div>
+          </div>
+     </main>
+     <script src="../assets/scripts/card_validate.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/3.4.0/imask.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+          integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="../assets/scripts/wallet-forms.js"></script>
+     
+     <script src="../assets/scripts/chart-render.js"></script>
+     
+          
+</body>
+</html>

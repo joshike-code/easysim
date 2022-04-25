@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../assets/css/dashboard.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <title>Port In | EasySIM</title>
+</head>
+<body>
+     <nav class="dash-nav">
+          <div class="container">
+               <img src="../assets/images/logo_blue.svg" alt="" class="nav-brand">
+               <div class="search-bar">
+                    <img src="../assets/images/search_grey.svg" alt="">
+                    <input type="search" placeholder="Search EasySIM">
+               </div>
+               <div class="profile-area">
+                    <div class="theme-btn">
+                         <img src="../assets/images/light_mode_white.svg" alt="" class="active">
+                         <img src="../assets/images/dark_mode_black.svg" alt="" >
+                    </div>
+                    <div class="profile">
+                         <div class="profile-photo">
+                              <img src="../assets/images/profile_photo.svg" alt="">
+                         </div>
+                         <h5>Sunday</h5>
+                         <img src="../assets/images/profile_more.svg" alt="">
+                    </div>
+               </div>
+          </div>
+     </nav>
+     <!--==============END OF NAVBAR============-->
+
+     <!--==============MAIN (ASIDE | CONTENT | RIGHT)============-->
+     <main class="col1">
+          <div class="container">
+               <aside>
+                    <header>
+                         <div class="head-container">
+                              <img src="../assets/images/logo_blue.svg" alt="" class="nav-brand">
+                              <button class="close-btn"><img src="../assets/images/close_black.svg" alt=""></button>
+                         </div>
+                    </header>
+                    <div class="sidebar">
+                         <div class="form-group">
+                              <label for="myNumber">Active Number</label>
+                              <div class="input-group">
+                                   <select name="myNumber" id="myNumber">
+                                        <option value="+2349064283752" selected>+234 906 428 3752</option>
+                                        <option value="+2346420854521" >+234 642 085 4521</option>
+                                        <option value="+2343267324339" >+234 326 732 4339</option>
+                                        <option value="+2343845231055" >+234 384 523 1055</option>
+                                        <option value="+2346312978428" >+234 631 297 8428</option>
+                                        <option value="+2349048537292" >+234 904 853 7292</option>
+                                   </select>
+                              </div>
+                         </div>
+                         <a href="contacts.html">
+                              <img src="../assets/images/contacts_normal.svg" alt="">
+                              <h4>Contacts</h4>
+                         </a>
+                         <a href="calls.html">
+                              <img src="../assets/images/calls_normal.svg" alt="">
+                              <h4>Calls</h4>
+                         </a>
+                         <a href="messages.html">
+                              <img src="../assets/images/message_normal.svg" alt="">
+                              <h4>Messages</h4>
+                         </a>
+                         <a href="subscription.html">
+                              <img src="../assets/images/subplans_normal.svg" alt="">
+                              <h4>Subscription Plans</h4>
+                         </a>
+                         <a href="port.html" class="active">
+                              <img src="../assets/images/portsim_active.svg" alt="">
+                              <h4>Port SIM</h4>
+                         </a>
+                         <a href="wallet.html">
+                              <img src="../assets/images/wallet_normal.svg" alt="">
+                              <h4>Wallet</h4>
+                         </a>
+                         <a href="settings/account.html">
+                              <img src="../assets/images/settings_normal.svg" alt="">
+                              <h4>Settings</h4>
+                         </a>
+                         <a href="#">
+                              <img src="../assets/images/logout_normal.svg" alt="">
+                              <h4>Log out</h4>
+                         </a>
+                    </div>
+               </aside>
+               <!--==============END OF ASIDE============-->
+               
+               <section class="content">
+                    <div class="content-container">
+                         <h1>PORT SIM</h1>
+                         <!--PORT SIM-->
+                         <div class="content-wrapper">
+                              <div class="port-wrapper">
+                                   <div class="content-header">
+                                        <p>To initiate PORT IN request send "VIRTUALPORT" to *123# on the mobile number you want <br>to port to activate porting request</p>
+                                   </div>
+                                   <div class="content-body selected">
+                                        <div class="card-container lg in">
+                                             <div class="head">
+                                                  <h3 class="card-header">Port IN</h3>
+                                             </div>
+                                             <div class="details">
+                                                  <div class="network">
+                                                       <div class="form-group">
+                                                            <label for="network">Select Network</label>
+                                                            <div class="input-group input-select">
+                                                                 <select name="network" id="network">
+                                                                      <option value="mtn" selected>MTN</option>
+                                                                      <option value="airtel">AIRTEL</option>
+                                                                      <option value="glo">GLO</option>
+                                                                      <option value="9mobile">9MOBILE</option>
+                                                                 </select>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                                  <div class="number">
+                                                       <div class="form-group">
+                                                            <label for="phone">Phone Number</label>
+                                                            <div class="input-group">
+                                                                 <input type="text" id="phone" placeholder="Phone Number">
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="button-container">
+                                                  <button class="card-button">Submit</button>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </section>
+               <!--==============END OF CONTENT============-->
+               <div class="separator"></div>
+          </div>
+     </main>
+     <script src="../assets/scripts/main.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+          integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+</body>
+</html>

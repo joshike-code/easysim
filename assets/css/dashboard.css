@@ -12,6 +12,7 @@
 body {
      width: 100%;
      background-color: var(--color-grey);
+     color: var(--color-darker);
 }
 
 .hide {
@@ -961,6 +962,7 @@ section.right .dial-container input[type="search"]{
      padding: var(--form-padding-multistep);
      border-radius: var(--form-border-radius);
      margin-top: 1.7rem;
+     outline: none;
 }
 
 section.right .dial-container .output-area {
@@ -1536,10 +1538,9 @@ input:checked + .switch:active::before {
      border-radius: var(--dashboard-card-radius);
 }
 
-.sub-plan-wrapper .content-header .renew {
+.content-header .renew {
      background: var(--color-white);
      width: 50%;
-     min-width: 300px;
      display: flex;
      justify-content: space-between;
      align-items: center;
@@ -1671,13 +1672,13 @@ input:checked + .switch:active::before {
      font-size: .7rem;
      font-weight: 600;
      color: var(--color-grey-font);
-     border-bottom: 1px solid #CBCFD5;
+     border-bottom: 1px solid var(--card-silver-lining);
 }
 
 .sub-plan-wrapper .content-body .table-column .sub-table .table.table-body {
      font-size: .8rem;
      font-weight: 500;
-     height: 2.2rem;
+     height: 2.6rem;
      background: var(--color-white);
      color: var(--dashboard-card-font-color);
 }
@@ -1715,7 +1716,6 @@ input:checked + .switch:active::before {
 }
 
 .port-wrapper .content-body {
-     outline: 1px solid red;
      width: 100%;
      margin-top: 1.3rem;
      display: grid;
@@ -1763,8 +1763,18 @@ input:checked + .switch:active::before {
      grid-template-rows: .6fr 1fr 1fr;
 }
 
+.port-wrapper .content-body .card-container.lg.out {
+     height: 300px;
+     grid-template-rows: .4fr 1.8fr 1fr;
+}
+
 .port-wrapper .content-body .card-container.lg .details {
      justify-content: space-between;
+}
+
+.port-wrapper .content-body .card-container.lg.out .details {
+     flex-direction: column;
+     align-items: flex-start;
 }
 
 .port-wrapper .content-body .card-container.lg .form-group input, 
@@ -1772,14 +1782,22 @@ input:checked + .switch:active::before {
      font-size: .8rem;
 }
 
-.port-wrapper .content-body .card-container.lg .details .network {
+.port-wrapper .content-body .card-container.lg.in .details .network {
      width: 45%;
      margin-right: .6rem;
 }
 
-.port-wrapper .content-body .card-container.lg .details .number {
+.port-wrapper .content-body .card-container.lg.out .details .network {
+     width: 50%;
+}
+
+.port-wrapper .content-body .card-container.lg.in .details .number {
      width: 55%;
      margin-left: .6rem;
+}
+
+.port-wrapper .content-body .card-container.lg.out .details .number {
+     width: 50%;
 }
 
 .port-wrapper .content-body .card-container.lg .details .form-group input,
@@ -1792,6 +1810,694 @@ input:checked + .switch:active::before {
 }
 
 
+/* ========= WALLET ======= */
+.wallet-wrapper {
+     padding: var(--dashboard-wrapper-padding);
+}
+
+.wallet-wrapper .content-header {
+     height: 3rem;
+     display: flex;
+     width: 100%;
+     font-weight: 500;
+     font-size: 1rem;
+}
+      /*  Full style found in subscription  */
+.wallet-wrapper .content-header .renew {
+     width: 70%;
+     color: var(--color-primary);
+}
+
+.wallet-wrapper .content-body {
+     margin-top: 1.5rem;
+     max-width: 100%;
+}
+
+.wallet-wrapper .content-body .top-row {
+     height: 200px;
+     display: flex;
+     max-width: 100%;
+     gap: 1.5rem;
+}
+
+.wallet-wrapper .content-body .top-row .card-container {
+     width: 300px;
+     height: 100%;
+     display: grid;
+     grid-template-rows: 1fr 1fr 1fr;
+     padding: var(--dashboard-card-padding);
+     border-radius: var(--dashboard-card-radius);
+     background: var(--color-white);
+}
+
+.wallet-wrapper .content-body .top-row .card-container > * {
+     display: flex;
+}
+
+.wallet-wrapper .content-body .top-row .card-container .balance {
+     justify-content: center;
+     align-items: center;
+     gap: .7rem;
+}
+
+.wallet-wrapper .content-body .top-row .card-container .balance h2 {
+     font-size: 2.8rem;
+     font-weight: 500;
+     color: var(--color-primary);
+}
+
+.wallet-wrapper .content-body .top-row .card-container .balance img {
+     width: 47px;
+     margin-bottom: .2rem;
+}
+
+.wallet-wrapper .content-body .top-row .card-container .footer {
+     justify-content: space-between;
+     align-items: flex-end;
+}
+
+.wallet-wrapper .content-body .top-row .card-container .footer * {
+     font-weight: 500;
+     font-size: .8rem;
+     color: var(--color-grey-font);
+}
+
+.wallet-wrapper .content-body .top-row .card-container .footer .copy-container {
+     height: 55%;
+}
+
+.wallet-wrapper .content-body .top-row .card-container .footer .copy-container img {
+     width: 18px;
+     cursor: pointer;
+}
+
+.wallet-wrapper .content-body .top-row .chart-container {
+     background: var(--color-white);
+     padding: var(--dashboard-card-padding);
+     border-radius: var(--dashboard-card-radius);
+     width: 67%;
+     height: 100%;  
+     display: flex;
+     flex-direction: column; 
+}
+
+.wallet-wrapper .content-body .top-row .chart-container #myChart {
+     max-width: 100%;
+}
+
+.wallet-wrapper .content-body .bottom-row {
+     width: 100%;
+     margin-top: 1.5rem;
+     display: grid;
+     gap: 1.5rem;
+     grid-template-columns: minmax(0, 1fr) 1fr;
+}
+
+.wallet-wrapper .content-body .bottom-row .action-area {
+     width: 100%;
+}
+
+.wallet-wrapper .content-body .bottom-row .action-area .action-container {
+     width: 100%;
+}
+
+.wallet-wrapper .bottom-row .action-area .action-container .action-header {
+     width: 100%;
+     height: 41px;
+     display: flex;
+     background: var(--color-white);
+     border-radius: var(--dashboard-card-radius);
+     border-bottom-left-radius: 0;
+     border-bottom-right-radius: 0;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-container .action-header button {
+     font-size: .9rem;
+     font-weight: 500;
+     width: 50%;
+     display: flex;
+     align-items: center;
+     padding: var(--dashboard-card-padding);
+     color: var(--color-grey-font);
+     cursor: pointer;
+     background: transparent;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-container .action-header button:hover {
+     color: var(--color-primary);
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-container .action-header button.active {
+     color: var(--color-primary);
+     border-bottom: 2px solid var(--color-primary);
+}
+
+.wallet-wrapper .bottom-row .action-area .action-container .action-body {
+     width: 100%;
+     background: var(--color-white);
+     margin-top: .2rem;
+     border-radius: var(--dashboard-card-radius);
+     border-top-left-radius: 0;
+     border-top-right-radius: 0;
+     overflow: hidden;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-container .action-body .body-wrapper {
+     width: 300%;
+     display: flex;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-container .action-body .body-wrapper .wallet {
+     padding: var(--dashboard-card-padding);
+     width: 33.3333333333333333%;   
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet {
+     width: 100%;
+     transition: margin-left 0.3s ease-in-out;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet form {
+     width: 100%;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet .header {
+     display: flex;
+     justify-content: space-between;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.withdraw .header, 
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.send .header {
+     flex-direction: column;
+     margin-bottom: 1.5rem;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.withdraw .header .new-account {
+     display: flex;
+     justify-content: space-between;
+     margin-top: .7rem;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.withdraw .header .new-account p {
+     font-size: .8rem;
+     font-weight: 500;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.send .header .transfer-group h3 {
+     font-size: .8rem;
+     font-weight: 500;
+     color: var(--color-grey-outline);
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.send .header .transfer-contacts {
+     display: flex;
+     justify-content: space-between;
+     width: 75%;
+     margin-top: .8rem;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.send .header .transfer-contacts button {
+     background: transparent;
+     cursor: pointer;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.send .header .transfer-contacts img {
+     width: 41px;
+     border-radius: 50%;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet .header h2 {
+     font-size: 1.15rem;
+     font-weight: 500;
+     color: var(--color-primary);
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.deposit .header img {
+     width: 200px;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.withdraw .header img {
+     width: 14px;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet .body {
+     display: flex;
+     flex-direction: column;
+     gap: .5rem;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.withdraw .body {
+     gap: 1rem;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.send .body {
+     gap: 1rem;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet .body label {
+     font-size: .8rem;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet .body input, 
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet .body select {
+     height: 2.8rem;
+     margin-top: .1rem;
+     padding-left: 1rem;
+     font-size: .9rem;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.deposit .body .input-group.svg-area {
+     position: relative;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.deposit .body .card-info {
+     display: flex;
+     width: 70%;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.deposit .body .card-info .form-group:nth-child(1) {
+     margin-right: 1rem;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.deposit .body .card-info .form-group:nth-child(2) {
+     margin-left: 1rem;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.deposit .body svg.ccicon {
+    height: 38px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    width: 50px;
+}
+
+.wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet .body button {
+     margin-top: 1.2rem;
+}
 
 
+/*=======TRANSACTION HISTORY========*/
+.wallet-wrapper .bottom-row .action-area.transaction-area .action-header {
+     padding: var(--dashboard-card-padding);
+     padding-top: 0;
+     padding-bottom: 0;
+     align-items: center;
+}
 
+.wallet-wrapper .bottom-row .action-area.transaction-area .action-header h2 {
+     font-size: .9rem;
+     font-weight: 500;
+     color: var(--color-grey-font);
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .action-body {
+     height: 465px;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .action-body .transactions {
+     padding: var(--dashboard-card-padding);
+     display: flex;
+     flex-direction: column;
+     gap: 1.4rem
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .time-stamp {
+     font-size: .75rem;
+     font-weight: 400;
+     color: var(--color-grey-font);
+     text-transform: uppercase;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field {
+     display: flex;
+     justify-content: space-between;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .left {
+     display: flex;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .left .account-head p {
+     background: var(--color-primary);
+     color: var(--color-white);
+     padding: 0 .3rem;
+     font-weight: 500;
+     font-size: 1.25rem;
+     display: flex;
+     text-transform: uppercase;
+     align-content: center;
+     border-radius: 5px;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .left .account-details {
+     display: flex;
+     flex-direction: column;
+     margin-left: .5rem;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .left .account-details .account-name {
+     font-size: .75rem;
+     font-weight: 500;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .left .account-details .account-time {
+     font-size: .5rem;
+     font-weight: 500;
+     color: var(--border-outline-multistep);
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .right {
+     display: flex;
+     align-items: center;
+     gap: .2rem;
+     position: relative;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .right img {
+     display: none;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .right img:nth-child(2), 
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .right img:nth-child(4) {
+     width: 14px;
+     margin-bottom: .1rem;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .right img:nth-child(1), 
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .right img:nth-child(3) {
+     width: 8px;
+     position: absolute;
+     top: 2px;
+     left: -6px;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field .right p {
+     font-size: .75rem;
+     font-weight: 500;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field.credit .right p {
+     color: var(--color-primary);
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field.credit .right img:nth-child(2), 
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field.credit .right img:nth-child(1) {
+     display: block;
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field.debit .right p {
+     color: var(--dashboard-card-font-color);
+}
+
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field.debit .right img:nth-child(4), 
+.wallet-wrapper .bottom-row .action-area.transaction-area .transactions .account-field.debit .right img:nth-child(3) {
+     display: block;
+}
+
+/*================SETTINGS=============*/
+.settings-wrapper {
+     padding: var(--dashboard-wrapper-padding);
+}
+
+.settings-wrapper .content-header {
+     height: 3rem;
+     display: flex;
+     width: 100%;
+     font-weight: 500;
+     font-size: 1rem;
+     background: var(--color-white);
+     display: flex;
+     justify-content: space-between;
+     border-radius: var(--dashboard-card-radius);
+     border-bottom-left-radius: 0;
+     border-bottom-right-radius: 0;
+}
+
+.settings-wrapper .content-header a {
+     font-size: .7rem;
+     font-weight: 500;
+     color: var(--color-grey-font);
+     padding: var(--dashboard-card-padding);
+     background: transparent;
+     cursor: pointer;
+}
+
+.settings-wrapper .content-header a:hover {
+     color: var(--color-primary);
+}
+
+.settings-wrapper .content-header a.active {
+     color: var(--color-primary);
+     border-bottom: 2px solid var(--color-primary);
+}
+
+.settings-wrapper .content-body {
+     margin-top: 1.5rem;
+     width: 100%;
+     background: var(--color-white);
+     height: 100%;
+}
+
+.settings-wrapper .content-body .body-wrapper {
+     width: 100%;
+}
+
+.settings-wrapper .content-body .body-wrapper .settings {
+     width: 100%;
+     padding: var(--dashboard-card-padding);
+     display: flex;
+     flex-direction: column;
+}
+
+.settings-wrapper .content-body .body-wrapper .settings > * {
+     padding: 1.5rem;
+     display: flex;
+     border-bottom: 1px solid var(--card-silver-lining);
+     width: 100%;
+     justify-content: space-between;
+}
+
+.settings-wrapper .content-body .body-wrapper .settings > *:last-child {
+     border: none;
+}
+
+.settings-wrapper .content-body .body-wrapper .settings .fore-settings {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     gap: 1rem;
+     width: 100%;
+}
+
+.settings-wrapper .content-body .body-wrapper .settings .end-settings {
+     
+}
+
+.settings-wrapper .content-body .body-wrapper .settings img {
+     width: 20px;
+}
+
+.settings-wrapper .content-body .body-wrapper .settings h2 {
+     display: flex;
+     font-size: .9rem;
+     font-weight: 500;
+     color: var(--color-grey-font);
+     line-height: normal;
+     padding: 0;
+     border: none;
+}
+
+.settings-wrapper .content-body .body-wrapper .settings > * > * > h3 {
+     font-size: .9rem;
+     font-weight: 600;
+}
+
+.settings-wrapper .content-body .body-wrapper .settings > * > * > p {
+     font-size: .8rem;
+     font-weight: 500;
+}
+
+.settings-wrapper .content-body .button-container.two-btn {
+     display: flex;
+     gap: 2.1rem;
+     padding: 0 1rem;
+}
+
+.settings-wrapper .content-body .settings.account .row1 .button-container button {
+     width: 6rem;
+}
+
+.settings-wrapper .content-body .settings.account .row1 .end-settings img {
+     width: 14px;
+     cursor: pointer;
+}
+
+.settings-wrapper .content-body .item-container {
+     display: flex;
+     flex-direction: column;
+     padding-left: 1rem;
+     width: 100%;
+}
+
+.settings-wrapper .content-body .item-container > * {
+     display: flex;
+     align-items: center;
+     gap: .6rem;
+     margin-top: .7rem;
+     width: 100%;
+}
+
+.settings-wrapper .content-body .item-container > * p {
+     font-size: .6rem;
+     font-weight: 500;
+}
+
+.settings-wrapper .content-body .item-container button.cancel {
+     margin-left: auto;
+     cursor: pointer;
+     background: transparent;
+}
+
+.settings-wrapper .content-body .item-container button.cancel img {
+     width: 8px;
+}
+
+.settings-wrapper .content-body .settings.account .row3 .button-container {
+     display: flex;
+}
+
+.settings-wrapper .content-body .settings.account .row3 .button-container button {
+     width: 12rem;
+}
+
+.settings-wrapper .content-body .settings.calls .row2 .switch-wrapper {
+     margin-left: auto;
+}
+
+.settings-wrapper .content-body .settings.voicemail .row1 .button-container button {
+     width: 11rem;
+}
+
+.settings-wrapper .content-body .settings.voicemail .row1 .end-settings img {
+     width: 13px;
+     cursor: pointer;
+}
+
+.settings-wrapper .content-body .settings.payments .row1 img {
+     width: 34px;
+     margin-right: .8rem;
+}
+
+.settings-wrapper .content-body .settings.payments .row2 .pay-items {
+     display: flex;
+     align-items: center;
+     gap: 1rem;
+}
+
+.settings-wrapper .content-body .settings.payments .row2 .pay-items button {
+     width: 2.2rem;
+     height: 2.2rem;
+     font-size: 2rem;
+     font-weight: 400;
+     border-radius: 50%;
+}
+
+.settings-wrapper .content-body .settings.payments .row2 .pay-items p {
+     font-size: .8rem;
+     font-weight: 500;
+     color: var(--color-primary);
+}
+
+.settings-wrapper .content-body .settings.security .row1 img {
+     width: 34px;
+     margin-right: .8rem;
+}
+
+.settings-wrapper .content-body .settings.security .device-info {
+     display: flex;
+     gap: .4rem
+}
+
+.settings-wrapper .content-body .settings.security .device-info img {
+     width: 24px;
+}
+
+.settings-wrapper .content-body .settings.security .device-info .device-details {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+}
+
+.settings-wrapper .content-body .settings.security .device-info .device-details h4 {
+     font-size: .7rem;
+     font-weight: 600;
+}
+
+.settings-wrapper .content-body .settings.security .device-info .device-details .small-details {
+     display: flex;
+     align-items: center;
+     gap: .2rem;
+}
+
+.settings-wrapper .content-body .settings.security .device-info .device-details .small-details p {
+     font-size: .6rem;
+     font-weight: 500;
+}
+
+.settings-wrapper .content-body .settings.security .device-info .device-details .small-details p:nth-child(1) {
+     color: var(--color-grey-font);
+}
+
+.settings-wrapper .content-body .settings.security .device-info .device-details .small-details p:nth-child(3) {
+     color: var(--color-success);
+}
+
+.settings-wrapper .content-body .settings.security .device-info .device-details .small-details .sep {
+     display: flex;
+     align-items: flex-end;
+}
+
+.settings-wrapper .content-body .end-settings img.pencil {
+     width: 17px;
+     cursor: pointer;
+}
+
+.settings-wrapper .content-body .settings.profile .fore-settings {
+     width: 600px;
+}
+
+.settings-wrapper .content-body .settings.profile .fore-settings .avatar-container {
+     border: 1px solid var(--color-grey-font);
+     width: 120px;
+     height: 120px;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.settings-wrapper .content-body .settings.profile .fore-settings .avatar-container img {
+     width: 90px;
+}
+
+.settings-wrapper .content-body .settings.profile .fore-settings .input-row {
+     display: flex;
+     gap: 4rem;
+}
+
+.settings-wrapper .content-body .settings.profile .fore-settings .input-row.row-3 {
+     width: 300px;
+}
+
+.settings-wrapper .content-body .settings.profile .fore-settings .input-row.row-4 {
+     width: 200px;
+}
+
+.settings-wrapper .content-body .settings.profile .fore-settings .input-row input, 
+.settings-wrapper .content-body .settings.profile .fore-settings .input-row select {
+     height: 2.6rem;
+}
+
+.settings-wrapper .content-body .settings.profile .fore-settings .row-5 button {
+     width: 90px;
+}
