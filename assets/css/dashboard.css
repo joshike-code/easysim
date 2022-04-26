@@ -1030,6 +1030,10 @@ section.right .dial-container .output-area #output {
      align-items: center;
 }
 
+.num#one {
+     height: 3.4rem;
+}
+
 .sub {
   font-size: 0.77rem;
   color: #C4CAD3;

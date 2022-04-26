@@ -323,9 +323,11 @@
                               <div id="output"></div>
                          </div>
                          <div class="row">
-                              <div class="digit" id="one">1</div>
-                              <div class="digit" id="two">
-                                   <p class="num">2</p>
+                              <div class="digit">
+                                   <p class="num" id="one">1</p>
+                              </div>
+                              <div class="digit" >
+                                   <p class="num" id="two">2</p>
                                    <div class="sub">ABC</div>
                               </div>
                               <div class="digit" id="three">
@@ -362,11 +364,14 @@
                               </div>
                          </div>
                          <div class="row">
-                              <div class="digit">*
+                              <div class="digit">
+                                   <p class="num">*</p>
                               </div>
-                              <div class="digit">0
+                              <div class="digit">
+                                   <p class="num">0</p>
                               </div>
-                              <div class="digit">#
+                              <div class="digit">
+                                   <p class="num">#</p>
                               </div>
                          </div>
                          <div class="botrow">
@@ -392,7 +397,7 @@
      <script>
            var count = 0;
 
-               $(".digit").on('click', function () {
+               $(".num").on('click', function () {
                     var num = ($(this).clone().children().remove().end().text());
                     if (count < 11) {
                          $("#output").append('<span>' + num.trim() + '</span>');
