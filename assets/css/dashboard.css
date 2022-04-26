@@ -135,9 +135,56 @@ nav .profile-area .profile h5 {
      font-weight: 400;
 }
 
-nav .profile-area .profile > img {
-     width: 12px;
+nav .profile-area .profile .dropdown button {
+     background: transparent;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     cursor: pointer;
 }
+
+nav .profile-area .profile .dropdown button img {
+     width: 13px;
+}
+
+.dropdown {
+  float: right;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 120px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  right: -10px;
+  top: 25px;
+  z-index: 1;
+  border-radius: 6px;
+}
+
+.dropdown-content a {
+  color: var(--color-darker);
+  margin: .6rem 7px;
+  padding: .2rem;
+  text-decoration: none;
+  display: block;
+  font-size: .8rem;
+  border-radius: 2px;
+}
+
+.dropdown a:hover {
+     color: #000;
+}
+
+.show {
+     display: block;
+}
+
+
 
 main .container {
      display: grid;
