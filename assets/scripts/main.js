@@ -134,3 +134,35 @@ window.onclick = function(event) {
     }
   }
 }
+
+// Clipboard copy (Account settings)
+function myCopy() {
+  var copyText = document.getElementById("NumberCopy");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+  
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied";
+}
+
+function outFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
+
+// Clipboard copy (Wallet)
+function myIdCopy() {
+  var copyText = document.getElementById("IdCopy");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+  
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied";
+}
+
+function outIdFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copy";
+}

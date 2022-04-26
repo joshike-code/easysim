@@ -124,7 +124,7 @@
                                                   <div class="row1">
                                                        <div class="fore-settings">
                                                             <h3>EASYSIM NUMBER</h3>
-                                                            <p>+234 832 - 4572</p>
+                                                            <input type="text" disabled value="+234 832 - 4572" id="NumberCopy">
                                                             <div class="button-container two-btn">
                                                                  <button class="card-button settings-btn">Change</button>
                                                                  <button class="card-button settings-btn">Port</button>
@@ -132,7 +132,10 @@
                                                             </div>
                                                        </div>
                                                        <div class="end-settings">
-                                                            <img src="../../assets/images/account_copy.svg" alt="">
+                                                            <div class="tooltip">
+                                                                 <button onclick="myCopy()" onmouseout="outFunc()" ><span class="tooltiptext" id="myTooltip">Copy to clipboard</span><img src="../../assets/images/account_copy.svg" alt=""></button>
+                                                                 
+                                                            </div>
                                                        </div>
                                                   </div>
                                                   <div class="row2">

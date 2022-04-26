@@ -128,10 +128,12 @@
                                                   <div class="footer">
                                                        <div class="wallet-id">
                                                             <h5>Wallet ID:</h5>
-                                                            <p>1109654789dc</p>
+                                                            <input type="text" disabled value="1109654789dc" id="IdCopy">
                                                        </div>
                                                        <div class="copy-container">
-                                                            <img src="../assets/images/copy_balance.svg" alt="">
+                                                            <div class="tooltip">
+                                                                 <button onclick="myIdCopy()" onmouseout="outIdFunc()" ><span class="tooltiptext" id="myTooltip">Copy</span><img src="../assets/images/copy_balance.svg" alt=""></button>
+                                                            </div>
                                                        </div>
                                                   </div>
                                              </div>
