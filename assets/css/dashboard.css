@@ -2233,8 +2233,6 @@ input:checked + .switch:active::before {
      display: flex;
      justify-content: space-between;
      border-radius: var(--dashboard-card-radius);
-     border-bottom-left-radius: 0;
-     border-bottom-right-radius: 0;
 }
 
 .settings-wrapper .content-header a {
@@ -2260,6 +2258,7 @@ input:checked + .switch:active::before {
      width: 100%;
      background: var(--color-white);
      height: 100%;
+     border-radius: var(--dashboard-card-radius);
 }
 
 .settings-wrapper .content-body .body-wrapper {
