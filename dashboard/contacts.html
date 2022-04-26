@@ -195,9 +195,11 @@
                               <div id="output"></div>
                          </div>
                          <div class="row">
-                              <div class="digit" id="one">1</div>
-                              <div class="digit" id="two">
-                                   <p class="num">2</p>
+                              <div class="digit">
+                                   <p class="num" id="one">1</p>
+                              </div>
+                              <div class="digit">
+                                   <p class="num" id="two">2</p>
                                    <div class="sub">ABC</div>
                               </div>
                               <div class="digit" id="three">
@@ -234,11 +236,14 @@
                               </div>
                          </div>
                          <div class="row">
-                              <div class="digit">*
+                              <div class="digit">
+                                   <p class="num">*</p>
                               </div>
-                              <div class="digit">0
+                              <div class="digit">
+                                   <p class="num">0</p>
                               </div>
-                              <div class="digit">#
+                              <div class="digit">
+                                   <p class="num">#</p>
                               </div>
                          </div>
                          <div class="botrow">
@@ -262,21 +267,21 @@
           integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
           crossorigin="anonymous" referrerpolicy="no-referrer"></script>
      <script>
-           var count = 0;
+          var count = 0;
 
-               $(".digit").on('click', function () {
-                    var num = ($(this).clone().children().remove().end().text());
-                    if (count < 11) {
-                         $("#output").append('<span>' + num.trim() + '</span>');
+          $(".num").on('click', function () {
+               var num = ($(this).clone().children().remove().end().text());
+               if (count < 11) {
+                    $("#output").append('<span>' + num.trim() + '</span>');
 
-                         count++
-                    }
-               });
+                    count++
+               }
+          });
 
-               $('.del-num').on('click', function () {
-                    $('#output span:last-child').remove();
-                    count--;
-               });
+          $('.del-num').on('click', function () {
+               $('#output span:last-child').remove();
+               count--;
+          });
      </script>
     
 </body>
