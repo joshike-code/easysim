@@ -168,7 +168,7 @@ nav .profile-area .profile .dropdown button img {
 
 .dropdown-content a {
   color: var(--color-darker);
-  margin: .6rem 7px;
+  margin: .6rem 1rem;
   padding: .2rem;
   text-decoration: none;
   display: block;
@@ -178,6 +178,7 @@ nav .profile-area .profile .dropdown button img {
 
 .dropdown a:hover {
      color: #000;
+     text-decoration: underline;
 }
 
 .show {
@@ -2498,6 +2499,10 @@ input:checked + .switch:active::before {
      cursor: pointer;
 }
 
+.settings-wrapper .content-body .settings.notification .row1 {
+     border-bottom: none;
+}
+
 .settings-wrapper .content-body .settings.payments .row1 img {
      width: 34px;
      margin-right: .8rem;
@@ -2579,6 +2584,15 @@ input:checked + .switch:active::before {
 
 .settings-wrapper .content-body .settings.profile .fore-settings {
      width: 600px;
+}
+
+.settings-wrapper .content-body .settings.privacy .row3 .fore-settings a {
+     cursor: pointer;
+     color: var(--color-primary);
+}
+
+.settings-wrapper .content-body .settings.privacy .row3 .fore-settings a:hover {
+     text-decoration: underline;
 }
 
 .settings-wrapper .content-body .settings.profile .fore-settings .avatar-container {
