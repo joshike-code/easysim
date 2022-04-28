@@ -1256,9 +1256,9 @@ input:checked + .switch:active::before {
 .message-wrapper .content-body a.message {
      color: var(--color-dark);
      width: 100%;
-     padding: .8rem .1rem;
      padding: var(--contact-list-padding);
-     
+     padding-top: .9rem;
+     padding-bottom: .9rem;
      display: block;
      background: transparent;
 }
@@ -2629,4 +2629,12 @@ input:checked + .switch:active::before {
 
 .settings-wrapper .content-body .settings.profile .fore-settings .row-5 button {
      width: 90px;
+}
+
+
+/* ==================== MEDIA QUERIES FOR TABLETS ================ */
+@media  screen and (max-width: 1024px) {
+     body {
+          background: red;
+     }
 }
