@@ -150,7 +150,6 @@ nav .profile-area .profile .dropdown button img {
 .dropdown {
   float: right;
   position: relative;
-  display: inline-block;
 }
 
 .dropdown-content {
@@ -2354,10 +2353,6 @@ input:checked + .switch:active::before {
      width: 100%;
 }
 
-.settings-wrapper .content-body .body-wrapper .settings .end-settings {
-     
-}
-
 .settings-wrapper .content-body .body-wrapper .settings img {
      width: 20px;
 }
@@ -2632,9 +2627,3 @@ input:checked + .switch:active::before {
 }
 
 
-/* ==================== MEDIA QUERIES FOR TABLETS ================ */
-@media  screen and (max-width: 1024px) {
-     body {
-          background: red;
-     }
-}
