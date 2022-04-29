@@ -2656,12 +2656,20 @@ input:checked + .switch:active::before {
           height: 260px;
      }
 
-     .settings-wrapper .header-wrapper .content-header {
+     .settings-wrapper .header-wrapper {
           width: 70vw;
           overflow-x: scroll;
      }
 
-     .settings-wrapper .content-header {
+     .settings-wrapper .header-wrapper::-webkit-scrollbar {
+          width: 0px;
+     }
+
+     .settings-wrapper .header-wrapper .content-header {
           width: 900px;
+     }
+
+     .settings-wrapper .content-body {
+          margin-top: .5rem;
      }
 }
