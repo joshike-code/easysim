@@ -2657,7 +2657,7 @@ input:checked + .switch:active::before {
      }
 
      .settings-wrapper .header-wrapper .content-header {
-          width: 800px;
+          width: 70vw;
           overflow-x: scroll;
      }
 
