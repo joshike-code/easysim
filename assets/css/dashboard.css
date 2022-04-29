@@ -1,4 +1,5 @@
 @import url("global.css");
+@import url("responsive.css") only screen and (max-width: 1178px);
 
 
 
@@ -1293,9 +1294,10 @@ input:checked + .switch:active::before {
 .message-wrapper .content-body .message-content .notify {
      margin-left: auto;
      display: flex;
-     justify-content: center;
+     justify-content: flex-end;
      align-items: flex-start;
      gap: .5rem;
+     width: 5rem;
 }
 
 .message-wrapper .content-body .message-content .notify .timer {
@@ -1606,6 +1608,11 @@ input:checked + .switch:active::before {
      margin-top: 1.5rem;
 }
 
+.sub-plan-wrapper .content-body .card-column {
+     display: flex;
+     flex-direction: column;
+}
+
 .sub-plan-wrapper .content-body .card-container {
      padding: var(--dashboard-card-padding);
      width: 400px;
@@ -1689,6 +1696,10 @@ input:checked + .switch:active::before {
 }
 
 .sub-plan-wrapper .content-body .table-column {
+     width: 100%;
+}
+
+.sub-plan-wrapper .content-body .table-column .table-wrapper {
      width: 100%;
 }
 
@@ -2627,3 +2638,30 @@ input:checked + .switch:active::before {
 }
 
 
+/* ==================== MEDIA QUERIES FOR TABLETS ================ */
+@media  screen and (max-width: 1178px) {
+     .sub-plan-wrapper .content-body {
+          grid-template-columns: auto;
+          grid-template-rows: auto 1fr;
+          gap: 1rem;
+     }
+
+     .sub-plan-wrapper .content-body .card-column {
+          display: flex;
+          flex-direction: row;
+          gap: 1.5rem;
+     }
+
+     .sub-plan-wrapper .content-body .card-container.card1 {
+          height: 260px;
+     }
+
+     .settings-wrapper .header-wrapper .content-header {
+          width: 800px;
+          overflow-x: scroll;
+     }
+
+     .settings-wrapper .content-header {
+          width: 900px;
+     }
+}
