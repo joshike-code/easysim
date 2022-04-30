@@ -2088,6 +2088,7 @@ input:checked + .switch:active::before {
 .wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.send .header .transfer-contacts {
      display: flex;
      justify-content: space-between;
+     gap: .5rem;
      width: 75%;
      margin-top: .8rem;
 }
@@ -2682,5 +2683,41 @@ input:checked + .switch:active::before {
 
      .wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet .header h2 {
           font-size: 1.05rem;
+     }
+}
+
+
+@media  screen and (max-width: 1060px) {
+     main .container {
+          grid-template-columns: auto .4rem 20rem;
+     }
+
+     main.col1 .container {
+          grid-template-columns: auto 1.3rem;
+     }
+
+     main aside {
+          position: fixed;
+          top: 0;
+          left: -100%;
+          z-index: 3;
+          background-color: var(--color-white);
+          width: 22rem;
+          height: 100vh;
+          box-shadow: 2rem 0 2rem var(--color-primary-light);
+          animation: showSidebar 500ms ease forwards;
+     }
+
+     main aside header {
+          display: block;
+     }
+
+     main aside {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          height: 88vh;
+          background: var(--color-white);
+          padding-left: 2rem;
      }
 }
