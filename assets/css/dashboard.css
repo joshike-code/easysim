@@ -2642,12 +2642,11 @@ input:checked + .switch:active::before {
 @media  screen and (max-width: 1178px) {
      .sub-plan-wrapper .content-body {
           grid-template-columns: auto;
-          grid-template-rows: auto 1fr;
+          grid-template-rows: auto auto;
           gap: 1rem;
      }
 
      .sub-plan-wrapper .content-body .card-column {
-          display: flex;
           flex-direction: row;
           gap: 1.5rem;
      }
@@ -2657,7 +2656,7 @@ input:checked + .switch:active::before {
      }
 
      .settings-wrapper .header-wrapper {
-          width: 70vw;
+          width: 75vw;
           overflow-x: scroll;
      }
 
@@ -2671,5 +2670,17 @@ input:checked + .switch:active::before {
 
      .settings-wrapper .content-body {
           margin-top: .5rem;
+     }
+
+     .wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet.deposit .header img {
+          width: 150px;
+     }
+
+     .sub-plan-wrapper .content-body .card-container {
+          width: 70%;
+     }
+
+     .wallet-wrapper .bottom-row .action-area.wallet-area .action-body .wallet .header h2 {
+          font-size: 1.05rem;
      }
 }
