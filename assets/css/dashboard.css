@@ -35,6 +35,10 @@ nav .container {
      align-items:center;
 }
 
+nav .container > .form-group {
+     display: none;
+}
+
 img.nav-brand {
      margin-top: 1rem;
      width: 95px;
@@ -50,12 +54,17 @@ nav .search-bar {
      background: #F8FAFF;
      color: #F8FAFF;
      width: 28vw;
+     height: 2.3rem;
      padding: 10px 30px 10px 25px;;
      border-radius: var(--form-border-radius);
      display: flex;
      align-items: center;
      gap: 1.8rem;
      margin-left: 10%;
+}
+
+nav .search-bar img {
+     width: 14px;
 }
 
 nav .search-bar input[type="search"] {
@@ -250,19 +259,19 @@ main aside .sidebar {
      margin-top: .7rem;
 }
 
-main aside .sidebar .form-group {
+.form-group.active-number {
      width: 100%;
 }
 
-main aside .sidebar .form-group .input-group {
+.form-group.active-number .input-group {
      width: 100%;
 }
 
-main aside .sidebar .form-group label {
+.form-group.active-number label {
      display: none;
 }
 
-main aside .sidebar .form-group select {
+.form-group.active-number select {
      border: 1px solid var(--border-outline-multistep);
      height: 2.2rem;
      width: 84%;
@@ -277,18 +286,34 @@ main aside .sidebar .form-group select {
 main aside .sidebar a {
      width: 100%;
      height: 2.4rem;
-     display: flex;
-     align-items: center;
-     gap: 1.3rem;
      color: var(--border-outline-multistep);
      position: relative;
      transition: all 300ms ease;
 }
 
-main aside .sidebar a img {
-     width: 20px;
+main aside .sidebar a .side-content {
+     display: flex;
+     align-items: center;
+     gap: 1.3rem;
+     height: 100%;
      margin-left: 0;
      transition: all 300ms ease;
+}
+
+main aside .sidebar a .side-content:hover {
+     margin-left: .5rem;
+}
+
+main aside .sidebar a img {
+     width: 20px;
+}
+
+main aside .sidebar a img:nth-child(1) {
+     display: inline-block;
+}
+
+main aside .sidebar a img:nth-child(2) {
+     display: none;
 }
 
 main aside .sidebar h4 {
@@ -300,6 +325,14 @@ main aside .sidebar a.active {
      color: var(--color-primary);
 }
 
+main aside .sidebar a.active img:nth-child(1) {
+     display: none;
+}
+
+main aside .sidebar a.active img:nth-child(2) {
+     display: inline-block;
+}
+
 main aside .sidebar a.active:after {
      content: "";
      width: 4px;
@@ -308,21 +341,35 @@ main aside .sidebar a.active:after {
      background-color: var(--color-primary);
      border-radius: 6px;
      right: 0;
+     top: 0;
 }
 
 main aside .sidebar a:hover {
      color: var(--color-primary);
 }
 
+main aside .sidebar a:hover img:nth-child(1) {
+     display: none;
+}
 
-main aside .sidebar a:hover img {
-     margin-left: .5rem;
+main aside .sidebar a:hover img:nth-child(2) {
+     display: inline-block;
 }
 
 main aside .sidebar a:last-child {
      margin-top: 5rem;
      color: #E32424;
 }
+
+main aside .sidebar a:last-child:hover img:nth-child(1) {
+     display: inline-block;
+}
+
+main aside .sidebar a:last-child:hover img:nth-child(2) {
+     display: none;
+}
+
+
 
 
 /* =========GENERAL CONTENT SECTION  STYLES======= */
@@ -2688,6 +2735,53 @@ input:checked + .switch:active::before {
 
 
 @media  screen and (max-width: 1060px) {
+     nav .container > .form-group {
+          display: block;
+     }
+
+     nav .container > .form-group.top {
+          width: 170px;
+          margin-left: 2rem;
+          height: 2.3rem;
+     }
+
+     nav .container > .form-group.top select {
+          font-size: .7rem;
+     }
+
+     main .container {
+          grid-template-columns: 6rem auto .4rem 20rem;
+     }
+
+     main.col1 .container {
+          grid-template-columns: 6rem auto 1.3rem;
+     }
+
+     main .sidebar > .form-group {
+          display: none;
+     }
+
+     main .sidebar a h4 {
+          display: none;
+     }
+
+     .settings-wrapper .header-wrapper {
+          width: 100vw;
+          overflow-x: scroll;
+     }
+
+     .settings-wrapper .header-wrapper .content-header {
+          width: 1200px;
+     }
+
+}
+
+
+@media  screen and (max-width: 870px) {
+     main .sidebar > .form-group {
+          display: block;
+     }
+
      main .container {
           grid-template-columns: auto .4rem 20rem;
      }
@@ -2720,4 +2814,9 @@ input:checked + .switch:active::before {
           background: var(--color-white);
           padding-left: 2rem;
      }
+
+}
+
+@media  screen and (max-width: 760px) {
+     
 }
