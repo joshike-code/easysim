@@ -5,27 +5,26 @@
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="../assets/css/dashboard.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
      <title>Calls | EasySIM</title>
 </head>
 <body>
      <nav class="dash-nav">
           <div class="container">
+               <button class="mobile-menu" id="menu-btn"><img src="../assets/images/harmburger.svg" alt=""></button>
                <img src="../assets/images/logo_blue.svg" alt="" class="nav-brand">
                <div class="search-bar">
-                    <img src="../assets/images/search_grey.svg" alt="">
-                    <input type="search" placeholder="Search EasySIM">
-               </div>
-               <div class="form-group active-number top">
-                    <label for="myNumber">Active Number</label>
-                    <div class="input-group">
-                         <select name="myNumber" id="myNumber">
-                              <option value="+2349064283752" selected>+234 906 428 3752</option>
-                              <option value="+2346420854521">+234 642 085 4521</option>
-                              <option value="+2343267324339">+234 326 732 4339</option>
-                              <option value="+2343845231055">+234 384 523 1055</option>
-                              <option value="+2346312978428">+234 631 297 8428</option>
-                              <option value="+2349048537292">+234 904 853 7292</option>
-                         </select>
+                    <img id="search" src="../assets/images/search_grey.svg" alt="">
+                    <div class="secondary" id="secondary-header">
+                              <div class="back">
+                                   <i class="material-icons back" id="back-arrow">arrow_back</i>
+                              </div>
+                              <div class="search">
+                                   <form action="#">
+                                        <input id="search-field" type="search" placeholder="Search EasySIM">
+                                        <button><i class="material-icons search-btn" id="search-btn">search</i></button>
+                                   </form>
+                              </div>
                     </div>
                </div>
                <div class="profile-area">
@@ -34,14 +33,36 @@
                          <img src="../assets/images/dark_mode_black.svg" alt="" >
                     </div>
                     <div class="profile">
-                         <div class="profile-photo">
-                              <img src="../assets/images/profile_photo.svg" alt="">
+                         <div id="avatarWrapper" class="avatar-wrapper">
+                              <img src="../assets/images/profile_photo.svg" class="avatar-photo">
+                              <h5>Nnadi</h5>
+                              <svg viewbox="0 0 24 24" xmlns:xlink="http://www.w3.org/2000/svg" class="avatar-dropdown-arrow"
+                                   id="dropdownWrapperArrow" width="24" height="24">
+                                   <path d="M12 14.5c-.2 0-.3-.1-.5-.2l-3.8-3.6c-.2-.2-.2-.4-.2-.5 0-.1 0-.3.2-.5.3-.3.7-.3 1 0l3.3 3.1 3.3-3.1c.2-.2.5-.2.8-.1.3.1.4.4.4.6 0
+                                    .2-.1.4-.2.5l-3.8 3.6c-.1.1-.3.2-.5.2z" />
+                              </svg>
                          </div>
-                         <h5>Sunday</h5>
-                         <div class="dropdown">
-                              <button onclick="myDropdownBtn()" class="dropbtn"><img src="../assets/images/profile_more.svg" alt=""></button>
-                              <div id="myDropdown" class="dropdown-content">
-                                   <a href="settings/profile.html">Profile</a>
+                         <div id="dropdownWrapper" class="dropdown-wrapper" style="width: 256px;">
+                              <div class="dropdown-profile-details">
+                                   <span class="dropdown-profile-details--name">Paul Nnadi</span>
+                                   <span class="dropdown-profile-details--email">paulextrawonder@gmail.com</span>
+                              </div>
+                              <div class="form-group active-number">
+                                   <label for="myNumber">Active Number</label>
+                                   <div class="input-group">
+                                        <select name="myNumber" id="myNumber">
+                                             <option value="+2349064283752" selected>+234 906 428 3752</option>
+                                             <option value="+2346420854521">+234 642 085 4521</option>
+                                             <option value="+2343267324339">+234 326 732 4339</option>
+                                             <option value="+2343845231055">+234 384 523 1055</option>
+                                             <option value="+2346312978428">+234 631 297 8428</option>
+                                             <option value="+2349048537292">+234 904 853 7292</option>
+                                        </select>
+                                   </div>
+                              </div>
+                              <div class="dropdown-links">
+                                   <a href="#">Profile</a>
+                                   <a href="#">Sign out</a>
                               </div>
                          </div>
                     </div>
@@ -57,7 +78,7 @@
                     <header>
                          <div class="head-container">
                               <img src="../assets/images/logo_blue.svg" alt="" class="nav-brand">
-                              <button class="close-btn"><img src="../assets/images/close_black.svg" alt=""></button>
+                              <button id="close-btn"><img src="../assets/images/close_black.svg" alt=""></button>
                          </div>
                     </header>
                     <div class="sidebar">

@@ -45,6 +45,10 @@ img.nav-brand {
      height: 31px;
 }
 
+nav .mobile-menu {
+     display: none;
+}
+
 nav img {
      width: 1rem;
 }
@@ -67,7 +71,11 @@ nav .search-bar img {
      width: 14px;
 }
 
-nav .search-bar input[type="search"] {
+nav .search-bar .secondary .back, nav .search-bar .search button {
+     display: none;
+}
+
+nav .search-bar  input[type="search"] {
      color: var(--color-dark);
      background: transparent;
      width: 100%;
@@ -75,7 +83,7 @@ nav .search-bar input[type="search"] {
      outline: none;
 }
 
-nav .search-bar input[type="search"]::placeholder {
+nav .search-bar  input[type="search"]::placeholder {
      color: #313131;
 }
 
@@ -125,38 +133,123 @@ nav .profile-area .theme-btn img.active {
 }
 
 nav .profile-area .profile {
+     position: relative;
+     flex: 1 1 auto;
      display: flex;
      align-items: center;
      gap: 1rem;
 }
 
-nav .profile-area .profile .profile-photo {
+nav .profile-area .profile .avatar-wrapper {
      display: flex;
-     justify-content: center;
-     align-items: center;
-}
-
-nav .profile-area .profile .profile-photo img {
-     width: 27px;
-}
-
-nav .profile-area .profile h5 {
-     font-size: .8rem;
-     font-weight: 400;
-}
-
-nav .profile-area .profile .dropdown button {
-     background: transparent;
-     display: flex;
-     justify-content: center;
      align-items: center;
      cursor: pointer;
 }
 
-nav .profile-area .profile .dropdown button img {
-     width: 13px;
+nav .profile-area .profile .avatar-wrapper img {
+     width: 25px;
 }
 
+nav .profile-area .profile .avatar-wrapper h5 {
+     font-size: .8rem;
+     font-weight: 400;
+}
+
+nav .profile-area .profile .avatar-wrapper .avatar-dropdown-arrow {
+     transition: opacity 0.1s linear, transform 0.15s linear;
+}
+
+nav .profile-area .profile .avatar-wrapper .avatar-dropdown-arrow.active {
+     transform: rotate(180deg);
+}
+
+nav .profile-area .profile .avatar-wrapper:hover .avatar-dropdown-arrow {
+     opacity: 0.5;
+}
+
+nav .profile-area .profile .avatar-wrapper:hover h5 {
+     opacity: 0.7;
+}
+
+nav .profile-area .profile .avatar-photo {
+     border-radius: 4px;
+     margin-right: 0.5rem;
+}
+
+nav .profile-area .profile .dropdown-wrapper {
+     position: absolute;
+     top: 75%;
+     transform: scale(0.8);
+     transform-origin: top;
+     transform-origin: right;
+     right: 0;
+     z-index: 4;
+     display: flex;
+     flex-direction: column;
+     border-radius: 4px;
+     margin-top: .6rem;
+     padding: 1rem;
+     background-color: #fff;
+     box-shadow: 0 0 0 1px rgba(50, 50, 93, .08), 0 2px 4px 0 rgba(50, 50, 93, .05), 0 4px 8px 0 rgba(136, 152, 170, .08);
+     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+     opacity: 0;
+     visibility: hidden;
+}
+
+nav .profile-area .profile .dropdown-wrapper.active {
+     top: 100%;
+     transform: scale(1);
+     opacity: 1;
+     visibility: visible;
+}
+
+nav .profile-area .profile .dropdown-profile-details {
+     display: flex;
+     flex-direction: column;
+     padding-bottom: 1rem;
+     border-bottom: 1px solid #eaeaea;
+}
+
+nav .profile-area .profile .form-group {
+     display: none;
+}
+
+nav .profile-area .profile .dropdown-profile-details--name {
+     font-size: 1rem;
+     margin-bottom: 0;
+     font-weight: 600;
+     color: var(--color-dark);
+}
+
+nav .profile-area .profile .dropdown-profile-details--email {
+     font-size: .8rem;
+     color: #6f6f6f;
+}
+
+nav .profile-area .profile .dropdown-links {
+     display: flex;
+     flex-direction: column;
+     padding-top: 1rem;
+}
+
+nav .profile-area .profile .dropdown-links a {
+     color: #525f7f;
+     text-decoration: none;
+     padding-bottom: .7rem;
+     transition: all 0.1s linear;
+     font-size: .8rem;
+}
+
+nav .profile-area .profile .dropdown-links a:hover {
+     color: #ebeff5;
+     color: var(--color-primary);
+}
+
+nav .profile-area .profile .dropdown-links a:last-of-type {
+     padding-bottom: 0;
+}
+
+/*   OTHER DROPDOWNS ON DASHBOARD */
 .dropdown {
   float: right;
   position: relative;
@@ -2735,18 +2828,87 @@ input:checked + .switch:active::before {
 
 
 @media  screen and (max-width: 1060px) {
-     nav .container > .form-group {
+     nav .search-bar {
+          background: transparent;
+          color: var(--color-grey-font);
+          width: fit-content;
+          height: auto;
+          padding: 0;
+          border-radius: 0;
           display: block;
+          align-items: center;
+          margin-left: 10%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
      }
 
-     nav .container > .form-group.top {
-          width: 170px;
-          margin-left: 2rem;
-          height: 2.3rem;
+     nav .search-bar .secondary .back, nav .search-bar i {
+          display: inline-block;
      }
 
-     nav .container > .form-group.top select {
-          font-size: .7rem;
+     nav .search-bar .secondary {
+          background: #fff;
+          position: fixed;
+          top: 5px;
+          right: 40px;
+          visibility: hidden;
+          z-index: 1;
+          width: 76%;
+          height: 45px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+     }
+
+     nav .search-bar .secondary > * {
+          display: flex;
+          align-items: center;
+     }
+
+     nav .search-bar .secondary .search {
+          width: 70%;
+     }
+
+     nav .search-bar .secondary form {
+          display: flex;
+          width: 100%;
+     }
+
+     nav .search-bar .secondary form button {
+          background: transparent;
+     }
+
+     nav .search-bar .secondary form button i {
+          color: var(--color-grey-font);
+     }
+
+     nav .search-bar img {
+          width: 16px;
+     }
+
+     nav .profile-area .profile .avatar-wrapper h5, 
+     nav .profile-area .profile .avatar-wrapper .avatar-dropdown-arrow {
+          display: none;
+     }
+
+     nav .profile-area .profile .dropdown-profile-details {
+          display: flex;
+          flex-direction: column;
+          padding-bottom: .5rem;
+          border-bottom: none;
+     }
+
+     nav .profile-area .profile .form-group {
+          display: block;
+          width: 220px;
+          padding-bottom: 1rem;
+          border-bottom: 1px solid #eaeaea;
+     }
+
+     nav .profile-area .profile .form-group select {
+          font-size: .8rem;
      }
 
      main .container {
@@ -2782,6 +2944,10 @@ input:checked + .switch:active::before {
           display: block;
      }
 
+     main .sidebar a h4 {
+          display: block;
+     }
+
      main .container {
           grid-template-columns: auto .4rem 20rem;
      }
@@ -2796,27 +2962,48 @@ input:checked + .switch:active::before {
           left: -100%;
           z-index: 3;
           background-color: var(--color-white);
-          width: 22rem;
+          width: 18rem;
           height: 100vh;
           box-shadow: 2rem 0 2rem var(--color-primary-light);
           animation: showSidebar 500ms ease forwards;
+     }
+
+     @keyframes showSidebar {
+          to {
+               left: 0;
+          }
      }
 
      main aside header {
           display: block;
      }
 
-     main aside {
-          display: flex;
-          flex-direction: column;
-          gap: 1rem;
-          height: 88vh;
-          background: var(--color-white);
-          padding-left: 2rem;
+     nav .nav-brand {
+          display: none;
      }
 
+     nav .mobile-menu {
+          display: block;
+          background: transparent;
+          cursor: pointer;
+     }
+
+     nav .mobile-menu img {
+          width: 22px;
+     }
+
+     nav .search-bar {
+          margin-left: auto;
+     }
+
+     nav .search-bar img {
+          width: 18px;
+     }
 }
 
-@media  screen and (max-width: 760px) {
-     
+
+@media  screen and (max-width: 770px) {
+
 }
+ 
+ 

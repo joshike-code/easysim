@@ -1,91 +1,3 @@
-// MULTISTEP FORM SCRIPT
-const slidePage = document.querySelector(".slide-page");
-const nextBtnFirst = document.querySelector(".firstNext");
-const prevBtnSec = document.querySelector(".prev-1");
-const nextBtnSec = document.querySelector(".next-1");
-const prevBtnThird = document.querySelector(".prev-2");
-const nextBtnThird = document.querySelector(".next-2");
-const prevBtnFourth = document.querySelector(".prev-3");
-const nextBtnFourth = document.querySelector(".next-3");
-const prevBtnFifth = document.querySelector(".prev-4");
-const submitBtn = document.querySelector(".submit");
-const progressText = document.querySelectorAll(".step p");
-const bullet = document.querySelectorAll(".step .bullet");
-let current = 1;
-
-nextBtnFirst.addEventListener("click", function(event){
-  event.preventDefault();
-  slidePage.style.marginLeft = "-20%";
-  bullet[current - 1].classList.add("active");
-  progressText[current - 1].classList.remove("active");
-  progressText[current].classList.add("active");
-  current += 1;
-});
-nextBtnSec.addEventListener("click", function(event){
-  event.preventDefault();
-  slidePage.style.marginLeft = "-40%";
-  bullet[current - 1].classList.add("active");
-  progressText[current].classList.add("active");
-  progressText[current - 1].classList.remove("active");
-  current += 1;
-});
-nextBtnThird.addEventListener("click", function(event){
-  event.preventDefault();
-  slidePage.style.marginLeft = "-60%";
-  bullet[current - 2].classList.add("active");
-  progressText[current - 1].classList.add("active");
-  progressText[current - 2].classList.remove("active");
-  current += 1;
-});
-nextBtnFourth.addEventListener("click", function(event){
-  event.preventDefault();
-  slidePage.style.marginLeft = "-80%";
-  bullet[current - 2].classList.add("active");
-  progressText[current - 1].classList.add("active");
-  progressText[current - 2].classList.remove("active");
-  current += 1;
-});
-submitBtn.addEventListener("click", function(){
-  bullet[current - 2].classList.add("active");
-  progressText[current - 2].classList.add("active");
-  current += 1;
-  setTimeout(function(){
-    alert("Your Form Successfully Signed up");
-    location.reload();
-  },800);
-});
-
-prevBtnSec.addEventListener("click", function(event){
-  event.preventDefault();
-  slidePage.style.marginLeft = "0%";
-  bullet[current - 2].classList.remove("active");
-  progressText[current - 1].classList.remove("active");
-  progressText[current - 2].classList.add("active");
-  current -= 1;
-});
-prevBtnThird.addEventListener("click", function(event){
-  event.preventDefault();
-  slidePage.style.marginLeft = "-20%";
-  bullet[current - 2].classList.remove("active");
-  progressText[current - 1].classList.remove("active");
-  progressText[current - 2].classList.add("active");
-  current -= 1;
-});
-prevBtnFourth.addEventListener("click", function(event){
-  event.preventDefault();
-  slidePage.style.marginLeft = "-40%";
-  current -= 1;
-});
-prevBtnFifth.addEventListener("click", function(event){
-  event.preventDefault();
-  slidePage.style.marginLeft = "-60%";
-  bullet[current - 3].classList.remove("active");
-  progressText[current - 2].classList.remove("active");
-  progressText[current - 3].classList.add("active");
-  current -= 1;
-});
-
-
 //PHONE MODAL TOGGLER
 function togglePhone() {
   var modal = document.getElementById("modal");
@@ -166,3 +78,55 @@ function outIdFunc() {
   var tooltip = document.getElementById("myTooltip");
   tooltip.innerHTML = "Copy";
 }
+
+
+// Mobile Search
+const search = document.getElementById("search");
+const secondary = document.getElementById("secondary-header");
+const back = document.getElementById("back-arrow");
+
+search.addEventListener('click', () => {
+    secondary.style.visibility = 'visible';
+});
+
+back.addEventListener('click', () => {
+    secondary.style.visibility = 'hidden';
+});
+
+
+
+//TEST DROPDOWN
+var headerProfileAvatar = document.getElementById("avatarWrapper")
+var headerProfileDropdownArrow = document.getElementById("dropdownWrapperArrow");
+var headerProfileDropdown = document.getElementById("dropdownWrapper");
+
+document.addEventListener("click", function(event) {
+  var headerProfileDropdownClickedWithin = headerProfileDropdown.contains(event.target);
+  
+  if (!headerProfileDropdownClickedWithin) {
+    if (headerProfileDropdown.classList.contains("active")) {
+      headerProfileDropdown.classList.remove("active");
+      headerProfileDropdownArrow.classList.remove("active");
+    }
+  }
+});
+
+headerProfileAvatar.addEventListener("click", function(event) {
+  headerProfileDropdown.classList.toggle("active");
+  headerProfileDropdownArrow.classList.toggle("active");
+  event.stopPropagation();
+});
+
+
+// show or hide sidebar
+const menuBtn = document.querySelector('#menu-btn');
+const closeBtn = document.querySelector('#close-btn');
+const sidebar = document.querySelector('aside');
+
+menuBtn.addEventListener('click', () => {
+    sidebar.style.display = 'block';
+})
+
+closeBtn.addEventListener('click', () => {
+    sidebar.style.display = 'none';
+})
