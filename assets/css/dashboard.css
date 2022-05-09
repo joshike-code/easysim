@@ -3019,7 +3019,7 @@ input:checked + .switch:active::before {
      section.right {
           position: fixed;
           width: 100%;
-          height: 65vh;
+          height: 40vh;
           bottom: 0;
           background: var(--color-grey-outline);
      }
