@@ -877,6 +877,7 @@ main .content{
 /* =========PHONE MODAL (START) ======= */
 .phone-modal-container {
     position: fixed;
+    z-index: 6;
     left: 0;
     top: 0;
     width: 100%;
@@ -3021,7 +3022,8 @@ input:checked + .switch:active::before {
           width: 100%;
           height: 47vh;
           bottom: 0;
-          background: var(--color-grey-outline);
+          background: #97A0AC;
+          z-index: 5;
      }
 
      section.right .dial-container input {
@@ -3037,6 +3039,13 @@ input:checked + .switch:active::before {
           display: flex;
           justify-content: center;
           align-items: center;
+          
+     }
+
+     section.right .dial-container .output-area #output {
+          border-bottom: 1px solid var(--color-grey);
+          width: 80%;
+          color: var(--color-white);
      }
 
      
