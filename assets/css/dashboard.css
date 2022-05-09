@@ -3024,6 +3024,12 @@ input:checked + .switch:active::before {
           bottom: 0;
           background: #97A0AC;
           z-index: 5;
+          padding: 0;
+     }
+
+     section.right .dial-container {
+          width: 70%;
+          margin: 0 auto;
      }
 
      section.right .dial-container input {
