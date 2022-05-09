@@ -3032,6 +3032,10 @@ input:checked + .switch:active::before {
           margin: 0 auto;
      }
 
+     section.right .dial-container .row {
+          width: 97%;
+     }
+
      section.right .dial-container input {
           display: none;
      }
@@ -3045,7 +3049,6 @@ input:checked + .switch:active::before {
           display: flex;
           justify-content: center;
           align-items: center;
-          
      }
 
      section.right .dial-container .output-area #output {
