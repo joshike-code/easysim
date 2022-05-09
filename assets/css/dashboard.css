@@ -3022,6 +3022,7 @@ input:checked + .switch:active::before {
           height: 40vh;
           bottom: 0;
           background: var(--color-grey-outline);
+          color: red;
      }
 
      section.right .dial-container input {
