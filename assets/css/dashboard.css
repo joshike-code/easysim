@@ -3012,6 +3012,10 @@ input:checked + .switch:active::before {
           grid-template-columns: auto 1.3rem;
      }
 
+     main.col1 .container {
+          grid-template-columns: auto 1.3rem;
+     }
+
      section.content {
           grid-row: 1 / 2;
           grid-column: 1 / 2;
@@ -3056,11 +3060,6 @@ input:checked + .switch:active::before {
           width: 100%;
           color: var(--color-white);
           height: 80%;
-     }
-
-     
-     main.col1 .container {
-          grid-template-columns: auto 1.3rem;
      }
 }
  

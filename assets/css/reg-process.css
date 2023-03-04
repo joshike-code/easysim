@@ -4,6 +4,11 @@ body {
      width: 100%;
      background: var(--color-grey);
 }
+/* ==================== OVERLAY ================ */
+.loading-overlay {
+     opacity: 1;
+     transition: opacity 0.6s ease;
+}
 
 /* ==================== PROGRESS BAR ================ */
 main .progress-bar {
