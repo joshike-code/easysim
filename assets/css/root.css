@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Work+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+
+
+:root {
+     --color-white: #ffffff;
+     --color-light: #F3F5F7;
+     --color-grey-hover: #DBDCDE;
+     --color-grey-active: #CED1D4;
+     --color-grey-outline: #8D97A4;
+     --color-grey-font: #77828F;
+     --color-gray-dark: #56555e;
+     --color-gray-dark2: #5B6676;
+     --border-outline-multistep: #A9B1BC;
+     --chat-bubble-bg: #E8EBEF;
+     --color-dark: #27282f;
+     --color-dark-header: #313131;
+     --color-dark-secondary: #263446;
+     --color-darker: #192434;
+     --color-primary: #1164F5;
+     --color-primary-fade: #87AFF5;
+     --color-primary-fade2: #6E9FF5;
+     --color-primary-dark: #0551DA;
+     --dark-primary: #1368e3;
+     --color-secondary: #F542A0;
+     --color-error: #FF2A1F;
+     --color-success: #00A344;
+     --color-success2: #56BB6A;
+     --color-success-dark: #41A36A;
+     --color-neutral: #192434;
+
+     --form-bg: #F2F2F2;
+     --color-grey: #E5E5E5; 
+     --color-grey2: #C4CAD3;
+     --color-grey-out: #A3A3A3;
+
+     --color-primary-light: rgba(17, 100, 245, 0.2);
+     --color-secondary-light: rgba(245, 66, 160, 0.2);
+     --color-error-light: rgba(255, 42, 31, 0.2);
+     --color-success-light: rgba(0, 163, 68, 0.2);
+     --color-neutral-light: rgba(25, 36, 52, 0.2);
+
+     --form-border-radius: 4px;
+     --card-border-radius: 9px;
+     --card-button-border-radius: 6px;
+     --form-padding: 12px 40px 12px 20px; 
+     --form-padding-multistep: 7px 10px 7px 10px;
+     --form-padding-mobile: 7px 0;
+     --contact-list-padding: .6rem 1rem .6rem .6rem;
+     --form-height: 2.7rem;
+     --form-height-mobile: 2rem;
+     --font-small-mobile: .75rem;
+     --large-font-hero: 3.1rem;
+     --large-font-hero-tablet: 2.5rem;
+     --large-font-hero-mobile: 2rem;
+     --form-margin-multistep: .6rem;
+     --form-margin-multistep-tablet: .3rem;
+     --form-margin-multistep-mobile: .5rem;
+     --text-color: #8D97A4;
+
+     /* Message, Sub plans  */
+     --dashboard-wrapper-padding: .5rem;
+
+
+     --dashboard-header-padding: 0 1rem;
+     --dashboard-card-padding: 1rem;
+     --dashboard-card-radius: 7px;
+     --dashboard-card-font-color: #414D5E;
+     --color-grey-font: #77828F;
+     --card-silver-lining: #CBCFD5;
+
+
+
+
+     --color-white-new: #202528;
+     --color-light-new: #181A1E;
+     --color-dark-new: #ddd;
+     --color-gray-dark-new: #adacb5;
+}
